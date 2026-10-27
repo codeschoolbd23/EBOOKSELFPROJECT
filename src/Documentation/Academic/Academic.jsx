@@ -6,12 +6,12 @@ import Footer from '../Navigation/Footer/Footer';
 import AcademicHeader from './AcademicHeader';
 
 const Academic = () => {
-  useTitle("বিদ্যালয়")
+  useTitle("একাডেমিক")
     return (
-      <div className="w-full aura aura-rainbow">
-        <div className='w-full'>
+      <div className="container">
+        <div className="relative container shadow-0">
           <Navbar />
-          <AcademicHeader/>
+          <AcademicHeader />
           <div className="h-full w-full">
             <Outlet></Outlet>
           </div>

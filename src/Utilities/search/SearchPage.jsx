@@ -15,7 +15,7 @@ function SearchPage({ book }) {
   const about =
     "বাংলাদেশ সরকার কর্তৃক বিনামূল্যে বিতরণকৃত পাঠ্যপুস্তকসমূহকে সাধারণ শিক্ষার্থীদের দোরগোড়ায় পৌঁছে দিতে আমাদের এই ই-বুক সেলফ প্ল্যাটফর্ম একটি ডিজিটাল সহযোগী হিসেবে কাজ করছে। প্রযুক্তির এই আধুনিক যুগে শিক্ষার আলো ছড়িয়ে দিতে এবং পড়াশোনাকে আরও সহজলভ্য করতে আমরা সম্পূর্ণ বিনামূল্যে এই সেবাটি চালু করেছি।আসুন, আমরা সবাই মিলে শিক্ষার আলো ছড়িয়ে দিই এবং একটি শিক্ষিত ও সমৃদ্ধ আগামী প্রজন্ম গড়ে তুলি।";
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen container rounded-none">
       <div className="shadow-sm p-5 rounded-sm">
             Search Results for:{" "}
             <span className="text-primary font-sans underline">

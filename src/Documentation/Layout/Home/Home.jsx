@@ -4,13 +4,13 @@ import layoutProfile from "../../../assets/layoutProfile.png";
 export default function Home() {
   return (
     <div
-      className="relative text-center w-full mx-0 min-h-150 aura aura-rainbow rounded-none"
+      className="relative text-center container m-0 min-h-150"
     >
       <div className="absolute right-0">
         <Calendar />
       </div>
-      <div className="card flex flex-col justify-center items-center">
-        <h2 className="card-title">
+      <div className="flex flex-col justify-center items-center">
+        <h2 className="textarea-ghost">
           জীবনের শ্রেষ্ঠ সম্পদ
           <div className="badge badge-secondary p-2 rotate-6 font-extrabold text-2xl">
             পড়া

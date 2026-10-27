@@ -12,7 +12,7 @@ const Demi = ({sub}) => {
       <section className="w-full px-1">
         <div className="w-full">
           {/* subject overview section */}
-          <div className="flex w-full flex-wrap z-10">
+          <div className="flex w-full flex-wrap">
             {sub?.map((subject) => (
               <Link
                 key={subject.id}

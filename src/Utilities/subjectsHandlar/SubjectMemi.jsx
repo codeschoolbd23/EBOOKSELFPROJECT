@@ -51,34 +51,20 @@ export default function SubjectMemi({ sub, topic }) {
   const prevPage = () => changePage(-1);
   const nextPage = () => changePage(1);
   const fileName = sub.split("/").pop();
-
+const btnClass="mx-1 btn btn-dash font-thin btn-xs btn-info hover:text-white focus:bg-violet-500 px-2  rounded-full"
+const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
   return (
-    <div
-      className="w-full h-full"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "1px",
-      }}
-    >
+    <div className="w-full h-full flex flex-col justify-center items-center px-1">
       {/* Control Toolbar */}
-      <div
-        className="relative w-full flex justify-between pt-1 px-2 bg-success z-10"
-        style={{
-          marginBottom: "3px",
-          display: "flex",
-          gap: "10px",
-          alignItems: "center",
-        }}
-      >
+      <div className="relative w-full flex justify-between pt-1 px-2 mb-2">
         <span>
           <ExternalLink
             href={sub} // Path relative to your public folder
             download={fileName} // The filename the user will save it as
-            className="text-white font-medium rounded-full bg-red-500 hover:bg-orange-500 flex items-center justify-center focus:bg-green-400"
+            className="text-white px-1 font-thin rounded-full bg-red-500 hover:bg-orange-500 flex items-center justify-center focus:bg-green-400"
           >
             <FaDownload className="text-xl text-center text-white p-1" />
+            Download
           </ExternalLink>
         </span>
         <span>
@@ -86,16 +72,13 @@ export default function SubjectMemi({ sub, topic }) {
             <input
               type="number"
               name="page"
-              className="input-xs border bg-base-300 rounded-xl text-center w-fit"
-              placeholder="Enter page"
+              className="input-xs border-0 bg-base-300 rounded-xl text-center w-fit italic font-thin"
+              placeholder="Enter page no"
               // defaultValue={1}
               min="1" // Prevents entering negative pages
             />
             {/* Changing to type="submit" fires the HandleSubmit function */}
-            <button
-              type="submit"
-              className="bg-primary hover:bg-orange-400 hover:text-blue-400 focus:bg-violet-500 m-1 text-red-100 px-2 py-1 rounded-full border-b "
-            >
+            <button type="submit" className={btnZoomClass}>
               Go Page
             </button>
           </form>
@@ -103,20 +86,20 @@ export default function SubjectMemi({ sub, topic }) {
         <span>
           <button
             onClick={prevPage}
-            disabled={pageNumber <= 1}
-            className="bg-primary hover:bg-orange-400 hover:text-blue-400 focus:bg-violet-300 m-1 text-red-100 px-2 py-1 rounded-full border-b "
+            disabled={pageNumber <= 0}
+            className={btnClass}
           >
-            Previous Page
+            Previous
           </button>
-          <span>
+          <span className="font-thin">
             Page {pageNumber} of {numPages || "..."}
           </span>
           <button
             onClick={nextPage}
             disabled={pageNumber >= numPages}
-            className="bg-primary hover:bg-orange-400 hover:text-blue-400 focus:bg-violet-300 m-1 text-red-100 px-2 py-1 rounded-full border-b "
+            className={btnClass}
           >
-            Next Page
+            Next
           </button>
         </span>
 
@@ -125,15 +108,15 @@ export default function SubjectMemi({ sub, topic }) {
         <span>
           <button
             onClick={() => setScale((prev) => Math.max(prev - 0.2, 0.5))}
-            className="bg-primary hover:bg-orange-400 hover:text-blue-400 focus:bg-violet-300 m-1 text-red-100 px-2 py-1 rounded-full border-b "
+            className={btnZoomClass}
           >
-            Zoom Out
+            ZOOM OUT
           </button>
           <button
             onClick={() => setScale((prev) => Math.min(prev + 0.2, 2.0))}
-            className="bg-primary hover:bg-orange-400 hover:text-blue-400 focus:bg-violet-300 m-1 text-red-100 px-2 py-1 rounded-full border-b "
+            className={btnZoomClass}
           >
-            Zoom In
+            ZOOM IN
           </button>
         </span>
       </div>
@@ -141,12 +124,13 @@ export default function SubjectMemi({ sub, topic }) {
       {/* PDF Document Container */}
       <div className="flex w-full justify-between">
         <div className="w-2/12  text-blue flex flex-col h-screen m-0 overflow-scroll">
-          {topic.map((subTopic) => (
+          <div className="badge-ghost">অধ্যায় সমূহ</div>
+          {topic?.map((subTopic) => (
             <button
-              key={subTopic.id}
-              onClick={() => unitPage(subTopic.page)}
+              key={subTopic?.id}
+              onClick={() => unitPage(subTopic?.page)}
               disabled={pageNumber >= numPages}
-              className="bg-primary  hover:bg-orange-400 hover:text-slate-200 focus:bg-violet-300 m-1 text-red-100 px-2 py-1 rounded-full border-b "
+              className="text-start text-primary underline font-thin hover:bg-orange-500 hover:text-white focus:bg-violet-500 focus:text-pink-300 m-1 px-2 py-1 rounded-2xl"
             >
               {subTopic?.lesson}:{subTopic?.topic}
             </button>

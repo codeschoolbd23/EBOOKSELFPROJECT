@@ -19,15 +19,12 @@ const Navbar = () => {
   };  
   const classCSS = "dropdown-content menu bg-fuchsia-500 z-1 w-fit p-2";
   return (
-    <div className="relative aura aura-rainbow rounded-none w-full bg-primary">
-      <div className="bg-primary text-primary-content shadow-sm w-full">
+    <div className="sticky top-0 shadow-xs rounded-none container bg-white z-10 border-0">
+      <div className="container">
         <div className="collapse-title navbar">
           <div className="navbar-start">
-            <Link
-              to="/"
-              className="bg-primary text-xl flex items-center gap-1 font-bold"
-            >
-              <img src={logo1} alt="Logo" className="h-16 w-20" />
+            <Link to="/" className="text-xl flex items-center gap-1 font-bold">
+              <img src={logo1} alt="Logo" className="h-12 w-14" />
               <span className="text-amber-400">ই-বুক</span>
               <span className="text-2xl font-extrabold text-fuchsia-400">
                 //
@@ -41,17 +38,18 @@ const Navbar = () => {
                 // onChange={handleSubmit}
                 type="text"
                 name="page"
-                className="input text-black"
-                placeholder="Enter book name"
+                className="input font-thin text-black border-0 badge-ghost"
+                placeholder="Search by book name"
+                title="Search keyword: book name/class/writer"
               />
             </form>
           </div>
-          <div className="navbar-end flex text-2xl text-pink-200">
-            <ul className="menu menu-horizontal flex-nowrap">
+          <div className="navbar-end flex text-2xl text-primary">
+            <ul className="menu menu-horizontal flex-nowrap ">
               <li>
                 <Link to="/academic">একাডেমিক বই</Link>
               </li>
-              
+
               <li className="dropdown dropdown-center">
                 <Link to="/job" tabIndex={0} role="button">
                   জব
@@ -88,7 +86,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <Link to="/aichat" className="absolute right-0 top-100 bottom-0 flex btn btn-outline">
+      <Link
+        to="/aichat"
+        className="absolute right-0 top-100 bottom-0 flex btn btn-outline"
+      >
         <div className="chat chat-end">
           <div className="chat-bubble chat-bubble-warning hover:chat-bubble-primary w-20">
             ASK Me?

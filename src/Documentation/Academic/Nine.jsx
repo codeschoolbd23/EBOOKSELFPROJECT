@@ -9,73 +9,64 @@ import BGS9 from "../E_Book_Self/SSC_TEXT/BGS9.pdf";
 import ICT9 from "../E_Book_Self/SSC_TEXT/ICT9.pdf";
 import ClassNineChemistry from "../E_Book_Self/SSC_TEXT/ClassNineChemistry.pdf";
 import Demi from '../../Utilities/subjectsHandlar/Demi';
-const subTopics = [
-  { id: 1, lesson: "Hello We Bangladesh", page: 1 },
-  { id: 2, lesson: "Hello We Bangladesh", page: 20 },
-  { id: 3, lesson: "Hello We Bangladesh", page: 40 },
-  { id: 4, lesson: "Hello We Bangladesh", page: 60 },
-  { id: 5, lesson: "Hello We Bangladesh", page: 70 },
-  { id: 6, lesson: "Hello We Bangladesh", page: 80 },
-  { id: 7, lesson: "Hello We Bangladesh", page: 90 },
-  { id: 8, lesson: "Hello We Bangladesh", page: 100 },
-  { id: 9, lesson: "Hello We Bangladesh", page: 110 },
-];
+import SubjectTopics from '../../Utilities/subjectsHandlar/SubjectTopics';
+const {Topics_BGS_9}=SubjectTopics;
 const Subjects = [
  
   {
     id: 2,
     name: "বাংলা ব্যাকরণ",
     
-    content: <SubjectMemi sub={BanglaGrammar9} topic={subTopics} />,
+    content: <SubjectMemi sub={BanglaGrammar9} topic={Topics_BGS_9} />,
   },
  
   {
     id: 3,
     name: "গণিত",
     
-    content: <SubjectMemi sub={ClassNineMath} topic={subTopics} />,
+    content: <SubjectMemi sub={ClassNineMath} topic={Topics_BGS_9} />,
   },
   {
     id: 6,
     name: "রসায়ন",
     
-    content: <SubjectMemi sub={ClassNineChemistry} topic={subTopics} />,
+    content: <SubjectMemi sub={ClassNineChemistry} topic={Topics_BGS_9} />,
   },
   {
     id: 7,
     name: "পদার্থবিজ্ঞান",
     
-    content: <SubjectMemi sub={Physics9} topic={subTopics} />,
+    content: <SubjectMemi sub={Physics9} topic={Topics_BGS_9} />,
   },
   {
     id: 8,
     name: "জীববিজ্ঞান",
     
-    content: <SubjectMemi sub={Biology9} topic={subTopics} />,
+    content: <SubjectMemi sub={Biology9} topic={Topics_BGS_9} />,
   },
   {
     id: 9,
     name: "উচ্চতর গণিত",
     
-    content: <SubjectMemi sub={ClassNineHigherMath} topic={subTopics} />,
+    content: <SubjectMemi sub={ClassNineHigherMath} topic={Topics_BGS_9} />,
   },
   {
     id: 10,
     name: "বা.বি.প",
     
-    content: <SubjectMemi sub={BGS9} topic={subTopics} />,
+    content: <SubjectMemi sub={BGS9} topic={Topics_BGS_9} />,
   },
   {
     id: 11,
     name: "ICT",
     
-    content: <SubjectMemi sub={ICT9} topic={subTopics} />,
+    content: <SubjectMemi sub={ICT9} topic={Topics_BGS_9} />,
   },
   {
     id: 12,
     name: "বিজ্ঞান",
     
-    content: <SubjectMemi sub={Science9} topic={subTopics} />,
+    content: <SubjectMemi sub={Science9} topic={Topics_BGS_9} />,
   },
   
 ];

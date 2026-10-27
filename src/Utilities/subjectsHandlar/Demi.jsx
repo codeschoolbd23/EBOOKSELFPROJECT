@@ -12,21 +12,21 @@ const Demi = ({sub}) => {
       <section className="w-full px-1">
         <div className="w-full">
           {/* subject overview section */}
-          <div className="flex w-full flex-wrap">
+          <div className="flex w-full flex-wrap z-10">
             {sub?.map((subject) => (
               <Link
                 key={subject.id}
                 onClick={() => moveSubjects(subject.id)}
                 className={`${class_name}`}
               >
-                {subject.name}
+                {subject?.name}
               </Link>
             ))}
           </div>
           <>
             {sub?.map((subject) => (
               <div className="w-full mx-0 text-xs" key={subject.id}>
-                {Number(subject.id) === Number(subjectID) ? (
+                {Number(subject?.id) === Number(subjectID) ? (
                   <span>
                     {subject?.content}
                   </span>

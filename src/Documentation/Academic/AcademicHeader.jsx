@@ -6,6 +6,7 @@ import Six from './Six';
 import Seven from './Seven';
 import Eight from './Eight';
 import Nine from './Nine';
+import Eleven from './Eleven';
 const AcademicHeader = () => {
   const SchoolClass = [
     
@@ -16,6 +17,8 @@ const AcademicHeader = () => {
     { id: 8, name: "৮ম শ্রেণি", content: <Eight /> },
     { id: 9, name: "৯ম শ্রেণি", content: <Nine /> },
     { id: 10, name: "১০ম শ্রেণি", content: <Nine /> },
+    { id: 11, name: "একাদশ শ্রেণি", content: <Eleven /> },
+    { id: 12, name: "দ্বাদশ শ্রেণি", content: <Eleven /> },
   ];
   const [classID, setClassID] = useState(9);
   const moveClasses = (m) => {

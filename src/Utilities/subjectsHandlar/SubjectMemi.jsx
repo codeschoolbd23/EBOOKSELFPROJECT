@@ -11,7 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export default function SubjectMemi({ sub, topic }) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [scale, setScale] = useState(1.5); // Manage Zoom
+  const [scale, setScale] = useState(1); // Manage Zoom
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -54,7 +54,7 @@ export default function SubjectMemi({ sub, topic }) {
 
   return (
     <div
-      className="w-full"
+      className="w-full h-full"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -64,7 +64,7 @@ export default function SubjectMemi({ sub, topic }) {
     >
       {/* Control Toolbar */}
       <div
-        className="w-full flex justify-between pt-1 px-2 bg-success"
+        className="relative w-full flex justify-between pt-1 px-2 bg-success z-10"
         style={{
           marginBottom: "3px",
           display: "flex",
@@ -139,22 +139,20 @@ export default function SubjectMemi({ sub, topic }) {
       </div>
 
       {/* PDF Document Container */}
-      <div
-        className="flex w-full justify-between"
-      >
-        <div className="w-2/12 bg-primary flex flex-col  m-0">
+      <div className="flex w-full justify-between">
+        <div className="w-2/12  text-blue flex flex-col h-screen m-0 overflow-scroll">
           {topic.map((subTopic) => (
             <button
               key={subTopic.id}
               onClick={() => unitPage(subTopic.page)}
               disabled={pageNumber >= numPages}
-              className="bg-primary hover:bg-orange-400 hover:text-blue-400 focus:bg-violet-300 m-1 text-red-100 px-2 py-1 rounded-full border-b "
+              className="bg-primary  hover:bg-orange-400 hover:text-slate-200 focus:bg-violet-300 m-1 text-red-100 px-2 py-1 rounded-full border-b "
             >
-              {subTopic.id}:{subTopic.lesson}
+              {subTopic?.lesson}:{subTopic?.topic}
             </button>
           ))}
         </div>
-        <div className="flex flex-col items-center justify-center w-10/12">
+        <div className="h-full flex flex-col items-center justify-center w-10/12 mx-auto">
           <Document
             className="flex flex-col justify-center items-center"
             file={sub}

@@ -1,7 +1,7 @@
 import SubjectMemi from '../../Utilities/subjectsHandlar/SubjectMemi';
-import Math_5 from "../E_Book_Self/FIVE_TEXT/Math_5.Pdf";
-import Science_5 from "../E_Book_Self/FIVE_TEXT/Science_5.Pdf";
-import BGS_5 from "../E_Book_Self/FIVE_TEXT/BGS_5.Pdf";
+import Math_5 from "../E_Book_Self/FIVE_TEXT/Math_5.pdf";
+import Science_5 from "../E_Book_Self/FIVE_TEXT/Science_5.pdf";
+import BGS_5 from "../E_Book_Self/FIVE_TEXT/BGS_5.pdf";
 import Demi from '../../Utilities/subjectsHandlar/Demi';
 const subTopics = [
   { id: 1, lesson: "Hello We Bangladesh", page: 1 },

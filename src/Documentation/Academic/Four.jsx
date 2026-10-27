@@ -1,7 +1,7 @@
 import SubjectMemi from '../../Utilities/subjectsHandlar/SubjectMemi';
 import Math_4 from "../E_Book_Self/FOUR_TEXT/Math_4.Pdf";
-import Science_4 from "../E_Book_Self/FOUR_TEXT/Science_4.Pdf";
-import BGS_4 from "../E_Book_Self/FOUR_TEXT/BGS_4.Pdf";
+import Science_4 from "../E_Book_Self/FOUR_TEXT/Science_4.pdf";
+import BGS_4 from "../E_Book_Self/FOUR_TEXT/BGS_4.pdf";
 import Demi from '../../Utilities/subjectsHandlar/Demi';
 const subTopics = [
   { id: 1, lesson: "Hello We Bangladesh", page: 1 },

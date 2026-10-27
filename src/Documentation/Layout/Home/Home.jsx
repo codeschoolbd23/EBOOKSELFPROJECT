@@ -4,7 +4,7 @@ import layoutProfile from "../../../assets/layoutProfile.png";
 export default function Home() {
   return (
     <div
-      className="relative text-center w-full  min-h-180"
+      className="relative text-center w-full"
     >
       <div className="absolute right-0">
         <Calendar />

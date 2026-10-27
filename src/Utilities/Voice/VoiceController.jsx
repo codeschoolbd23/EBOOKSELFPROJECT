@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 function VoiceController() {
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState("");
   const navigate = useNavigate();
-
+console.log("Transcript",transcript)
   // ব্রাউজার সাপোর্ট চেক করা
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -15,6 +14,7 @@ function VoiceController() {
     recognition = new SpeechRecognition();
     recognition.continuous = false; // একবার কথা বলা শেষ হলে থমকে যাবে
     recognition.lang = "en-US"; // বাংলার জন্য 'bn-BD' ব্যবহার করতে পারেন
+    // recognition.lang = "bn-BD"; // বাংলার জন্য 'bn-BD' ব্যবহার করতে পারেন
     recognition.interimResults = false;
   }
 
@@ -30,30 +30,17 @@ function VoiceController() {
   };
 
   useEffect(() => {
-    if (!recognition) return;
+    // if (!recognition) return;
 
-    recognition.onresult = (event) => {
+    recognition.result = (event) => {
       const command = event.results[0][0].transcript.toLowerCase().trim();
       setTranscript(command);
       setIsListening(false);
 
-      // --- ভয়েস কমান্ড লজিক ---
-
-      // ১. হোম পেজে যাওয়ার কমান্ড
-      if (command.includes("go to home") || command === "home") {
-        navigate("/");
+      if (command.trim() !== "") {
+        navigate("/search", { state: { query: command } });
       }
-      // ২. অ্যাবাউট পেজে যাওয়ার কমান্ড
-      else if (command.includes("go to about") || command === "about") {
-        navigate("/about");
-      }
-      // ৩. সার্চ করার কমান্ড (যেমন ইউজার বলল: "search bangla book")
-      else if (command.startsWith("search")) {
-        const searchQuery = command.replace("search", "").trim();
-        if (searchQuery) {
-          navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-        }
-      }
+      else{navigate("/search", { state: { query: command } });}
     };
 
     recognition.onerror = (event) => {
@@ -71,7 +58,6 @@ function VoiceController() {
       <button
         onClick={startListening}
         style={{
-          padding: "8px 15px",
           background: isListening ? "#e74c3c" : "#2ecc71",
           color: "#fff",
           border: "none",
@@ -81,12 +67,12 @@ function VoiceController() {
           animation: isListening ? "pulse 1.5s infinite" : "none",
         }}
       >
-        {isListening ? "🎤 শুনছি..." : "🎙️ Voice Command"}
+        {isListening ? "🎤 শুনছি.." : "🎙️Voice"}
       </button>
 
       {transcript && (
         <span style={{ fontSize: "13px", color: "#ccc" }}>
-          ইউজার বলেছেন: "{transcript}"
+          বলেছেন: "{transcript}"
         </span>
       )}
 

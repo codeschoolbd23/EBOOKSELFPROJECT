@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo1 from "../../../assets/logo1.png";
 import { useNavigate } from "react-router-dom";
+// import Voice from '../../../Utilities/Voice/Voice';
 // import Search from '../../../Utilities/search/Search';
 const Navbar = () => {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ const Navbar = () => {
                 title="Search keyword: book name/class/writer"
               />
             </form>
+            {/* <Voice/> */}
           </div>
           <div className="navbar-end flex text-2xl text-primary">
             <ul className="menu menu-horizontal flex-nowrap ">
@@ -82,13 +84,15 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              
             </ul>
           </div>
         </div>
       </div>
       <Link
         to="/aichat"
-        className="absolute right-0 top-100 bottom-0 flex btn btn-outline"
+        role='btn'
+        className="absolute right-0 top-100 bottom-0 flex"
       >
         <div className="chat chat-end">
           <div className="chat-bubble chat-bubble-warning hover:chat-bubble-primary w-20">

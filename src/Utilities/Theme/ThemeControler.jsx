@@ -1,44 +1,47 @@
-import React from "react";
-
-const ThemeControler = ({ class_name }) => {
-  const colorData = [
-    { id: 1, color_name: "Default", color_value: "synthwave" },
-    { id: 2, color_name: "light", color_value: "light" },
-    { id: 3, color_name: "night", color_value: "night" },
-    { id: 4, color_name: "dark", color_value: "dark" },
-  ];
+import { useState} from "react";
+function ThemeControler() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <>
-      <div className={`dropdown dropdown-hover ${class_name}`}>
-        <div tabIndex={0} role="button" className="menu menu-horizontal">
-          <span className="mr-1">Theme</span>
-          <svg
-            className="w-3 h-4 fill-orange-600 opacity-60"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 2048 2048"
-          >
-            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-          </svg>
-        </div>
-        <ul
-          tabIndex={0}
-          className="dropdown-content z-[1] p-2 bg-base-100 w-24 mt-10"
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className={`transition-all duration-300 rounded-full flex items-center justify-center ${
+            darkMode
+              ? "bg-slate-900 border-slate-800 text-yellow-400 hover:bg-slate-800"
+              : "bg-white border-slate-200 text-slate-700 hover:bg-slate-100"
+          }`}
         >
-          {colorData.map((cl) => (
-            <li key={cl.id}>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-outline hover:bg-primary "
-                aria-label={cl.color_value}
-                value={cl.color_value}
+          {darkMode ? (
+            <svg
+              xmlns="http://w3.org"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-4 h-4 animate-pulse"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 3v2.25m0 13.5V21M4.22 4.22l1.58 1.58m9.59 9.59l1.58 1.58M3 12h2.25m13.5 0H21M4.22 19.78l1.58-1.58m9.59-9.59l1.58-1.58M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"
               />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://w3.org"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+              />
+            </svg>
+          )}
+        </button>
   );
-};
-
+}
 export default ThemeControler;

@@ -123,20 +123,20 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
 
       {/* PDF Document w-full */}
       <div className="flex w-full justify-between">
-        <div className="w-2/12  text-blue flex flex-col h-screen m-0 overflow-scroll">
+        <div className="w-1/5 text-blue flex flex-col h-screen m-0 overflow-scroll">
           <div className="badge-ghost">অধ্যায় সমূহ</div>
           {topic?.map((subTopic) => (
             <button
               key={subTopic?.id}
               onClick={() => unitPage(subTopic?.page)}
               disabled={pageNumber >= numPages}
-              className="text-start text-primary underline font-thin hover:bg-orange-500 hover:text-white focus:bg-violet-500 focus:text-pink-300 m-1 px-2 py-1 rounded-2xl"
+              className="text-start text-primary link link-hover font-thin  hover:text-primary focus:bg-violet-500 focus:text-pink-300 m-1 px-1 rounded-xl"
             >
               {subTopic?.lesson}:{subTopic?.topic}
             </button>
           ))}
         </div>
-        <div className="h-full flex flex-col items-center justify-center w-10/12 mx-auto">
+        <div className="flex flex-col items-center justify-center mx-auto">
           <Document
             className="flex flex-col justify-center items-center"
             file={sub}
@@ -145,6 +145,7 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
             error={<div>Failed to load PDF file.</div>}
           >
             <Page
+            
               pageNumber={pageNumber}
               scale={scale}
               renderAnnotationLayer={true}

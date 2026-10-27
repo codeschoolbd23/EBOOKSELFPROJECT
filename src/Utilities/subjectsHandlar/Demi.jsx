@@ -7,7 +7,7 @@ const Demi = ({sub}) => {
     };
     console.log(subjectID);
     const class_name =
-      "p-1 flex justify-center items-center border-indigo-900 focus:bg-primary focus:border-blue-500 focus:text-yellow-300 hover:border-blue-200 hover:bg-yellow-500 hover:text-white mx-1 rounded-full ";
+      "p-1 flex justify-center items-center focus:bg-primary focus:text-yellow-300 hover:bg-yellow-500 hover:text-white mx-1 rounded-full ";
     return (
       <section className="w-full px-1">
         <div className="w-full">
@@ -15,8 +15,8 @@ const Demi = ({sub}) => {
           <div className="flex w-full flex-wrap">
             {sub?.map((subject) => (
               <Link
-                key={subject.id}
-                onClick={() => moveSubjects(subject.id)}
+                key={subject?.id}
+                onClick={() => moveSubjects(subject?.id)}
                 className={`${class_name}`}
               >
                 {subject?.name}
@@ -25,13 +25,9 @@ const Demi = ({sub}) => {
           </div>
           <>
             {sub?.map((subject) => (
-              <div className="w-full mx-0 text-xs" key={subject.id}>
-                {Number(subject?.id) === Number(subjectID) ? (
-                  <span>
-                    {subject?.content}
-                  </span>
-                ) : (
-                  <div className="hidden">There is no class</div>
+              <div className="w-full mx-0 text-xs" key={subject?.id}>
+                {Number(subject?.id) === Number(subjectID) && (
+                  <spn> {subject?.content}</spn>
                 )}
               </div>
             ))}

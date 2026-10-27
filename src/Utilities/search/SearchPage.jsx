@@ -15,33 +15,31 @@ function SearchPage({ book }) {
   const about =
     "বাংলাদেশ সরকার কর্তৃক বিনামূল্যে বিতরণকৃত পাঠ্যপুস্তকসমূহকে সাধারণ শিক্ষার্থীদের দোরগোড়ায় পৌঁছে দিতে আমাদের এই ই-বুক সেলফ প্ল্যাটফর্ম একটি ডিজিটাল সহযোগী হিসেবে কাজ করছে। প্রযুক্তির এই আধুনিক যুগে শিক্ষার আলো ছড়িয়ে দিতে এবং পড়াশোনাকে আরও সহজলভ্য করতে আমরা সম্পূর্ণ বিনামূল্যে এই সেবাটি চালু করেছি।আসুন, আমরা সবাই মিলে শিক্ষার আলো ছড়িয়ে দিই এবং একটি শিক্ষিত ও সমৃদ্ধ আগামী প্রজন্ম গড়ে তুলি।";
   return (
-    <div className="min-h-screen w-full rounded-none">
-      <div className="shadow-sm p-5 rounded-sm">
-            Search Results for:{" "}
-            <span className="text-primary font-sans underline">
-              "{searchQuery || "Everything"}"
-            </span>
-          <p className="text-sm text-base-content/60 mt-1">
-            Found
-            <span className="px-2">
-              {
-                book?.filter((item) =>
-                  item.keyword
-                    .toLowerCase()
-                    .includes(searchQuery.toLowerCase()),
-                ).length
-              }
-            </span>
-            matching items
-          </p>
+    <div className="min-h-screen w-full">
+      <div className="w-full btn btn-dash py-5 ">
+        Search Results for:{" "}
+        <span className="text-primary font-sans underline">
+          "{searchQuery || "Everything"}"
+        </span>
+        <p className="text-sm text-base-content/60 mt-1">
+          Found
+          <span className="px-2">
+            {
+              book?.filter((item) =>
+                item.keyword.toLowerCase().includes(searchQuery.toLowerCase()),
+              ).length
+            }
+          </span>
+          matching items
+        </p>
       </div>
       <div>
         {book?.map((item) => (
-          <div key={item.id}>
+          <div key={item?.id}>
             {item.keyword.toLowerCase().includes(searchQuery.toLowerCase()) && (
-              <div className="card card-side">
+              <div className="flex p-5">
                 <Document
-                  className="p-2"
+                  className="p-3"
                   file={item?.content}
                   loading={<div>Loading Document...</div>}
                   error={<div>Failed to load PDF file.</div>}
@@ -49,18 +47,18 @@ function SearchPage({ book }) {
                   <Page
                     height={200}
                     pageNumber={1}
-                    pageColors={"#eeee"}
+                    pageColors={"#ffff"}
                     renderAnnotationLayer={true}
                     renderTextLayer={true}
                   />
                 </Document>
                 {/* Card Body Info */}
-                <div className="card-body">
-                  <p className="card-title font-bold text-base-content hover:text-primary cursor-pointer transition-colors">
+                <div className="flex flex-col justify-cenetr justify-center gap-4">
+                  <p className="text-start font-semibold hover:text-primary cursor-pointer transition-colors">
                     <ExternalLink
                       href={item?.content}
                       target="_blank"
-                      className="text-primary underline"
+                      className="text-primary link-hover"
                     >
                       {item?.name}
                     </ExternalLink>
@@ -83,22 +81,20 @@ function SearchPage({ book }) {
             )}
           </div>
         ))}
-        <div className="border w-full bg-red-300">
-          {book?.filter((item) =>
-            item.keyword.toLowerCase().includes(searchQuery.toLowerCase()),
-          ).length === 0 && (
-            <div className="w-full text-start p-10 flex flex-col justify-center items-center">
-              <p className="w-3/4 mx-auto">
-                Your searching book{" "}
-                <span className="text-blue-300 underline">{searchQuery}</span>{" "}
-                is not available now.
-              </p>
-              <p className="w-3/4 mx-auto">
-                You may search another one. Thank you.
-              </p>
-            </div>
-          )}
-        </div>
+        {book?.filter((item) =>
+          item.keyword.toLowerCase().includes(searchQuery.toLowerCase()),
+        ).length === 0 && (
+          <div className="w-full bg-red-300 text-start p-10 flex flex-col justify-center items-center">
+            <p className="w-3/4 mx-auto">
+              Your searching book{" "}
+              <span className="text-blue-300 underline">{searchQuery}</span> is
+              not available now.
+            </p>
+            <p className="w-3/4 mx-auto">
+              You may search another one. Thank you.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

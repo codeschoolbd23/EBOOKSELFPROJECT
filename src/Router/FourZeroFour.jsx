@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import useTitle from "../Utilities/Hook/useTitle";
-import Contact from "../Documentation/Shared/Contact/Contact";
 const FourZeroFour = () => {
   useTitle("404");
   return (
@@ -26,7 +25,7 @@ const FourZeroFour = () => {
         </div>
       </div>
       <div className="hidden md:block">
-        <Contact />
+       
       </div>
     </div>
   );

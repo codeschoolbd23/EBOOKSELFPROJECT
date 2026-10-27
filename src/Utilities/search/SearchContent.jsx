@@ -1,10 +1,10 @@
 import React  from "react";
 import Math_4 from "../../Documentation/E_Book_Self/FOUR_TEXT/Math_4.pdf";
-import Science_4 from "../../Documentation/E_Book_Self/FOUR_TEXT/Science_4.Pdf";
+import Science_4 from "../../Documentation/E_Book_Self/FOUR_TEXT/Science_4.pdf";
 import BGS_4 from "../../Documentation/E_Book_Self/FOUR_TEXT/BGS_4.Pdf";
-import Math_5 from "../../Documentation/E_Book_Self/FIVE_TEXT/Math_5.Pdf";
-import Science_5 from "../../Documentation/E_Book_Self/FIVE_TEXT/Science_5.Pdf";
-import BGS_5 from "../../Documentation/E_Book_Self/FIVE_TEXT/BGS_5.Pdf";
+import Math_5 from "../../Documentation/E_Book_Self/FIVE_TEXT/Math_5.pdf";
+import Science_5 from "../../Documentation/E_Book_Self/FIVE_TEXT/Science_5.pdf";
+import BGS_5 from "../../Documentation/E_Book_Self/FIVE_TEXT/BGS_5.pdf";
 import Math_6 from "../../Documentation/E_Book_Self/SIX_TEXT/Math_6.pdf";
 import Science_6 from "../../Documentation/E_Book_Self/SIX_TEXT/Science_6.pdf";
 import BGS_6 from "../../Documentation/E_Book_Self/SIX_TEXT/BGS_6.pdf";
@@ -36,7 +36,7 @@ const books = [
     name: "প্রাথমিক গণিত (চতুর্থ শ্রেণি)",
     author: "NCTB(National Curiculam Text Book Board)",
     content: Math_4,
-    keyword: "চতুর্থ শ্রেণি (Class Four) প্রাথমিক গণিত (চতুর্থ শ্রেণি)",
+    keyword: "চতুর্থ শ্রেণি (Class Four) প্রাথমিক গণিত (চতুর্থ শ্রেণি) Math",
   },
   {
     id: 10,
@@ -57,10 +57,10 @@ const books = [
   {
     id: 14,
     section: "পঞ্চম শ্রেণি (Class Five)",
-    name: "প্রাথমিক গণিত (পঞ্চম শ্রেণি)",
+    name: "প্রাথমিক গণিত (পঞ্চম শ্রেণি) ",
     author: "NCTB(National Curiculam Text Book Board)",
     content: Math_5,
-    keyword: "পঞ্চম শ্রেণি (Class Five) প্রাথমিক গণিত (পঞ্চম শ্রেণি)",
+    keyword: "পঞ্চম শ্রেণি (Class Five) প্রাথমিক গণিত (পঞ্চম শ্রেণি) Math",
   },
   {
     id: 15,

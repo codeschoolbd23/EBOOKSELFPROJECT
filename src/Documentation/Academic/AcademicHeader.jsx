@@ -8,7 +8,7 @@ import Eight from './Eight';
 import Nine from './Nine';
 import Eleven from './Eleven';
 const AcademicHeader = () => {
-  const SchoolClass = [
+  const AcademicClass = [
     
     { id: 4, name: "৪র্থ শ্রেণি", content: <Four /> },
     { id: 5, name: "৫ম শ্রেণি", content: <Five /> },
@@ -26,14 +26,11 @@ const AcademicHeader = () => {
   };
   console.log(classID);
   const class_name =
-    "m-1 text-sm text-primary border-b border-indigo-900 focus:text-white p-1 rounded-full focus:bg-blue-500 focus:border-blue-200 hover:border-blue-200 hover:bg-red-400 hover:text-center";
+    "mr-1 text-sm text-ghost font-thin  focus:text-white px-1 rounded-2xl focus:bg-blue-500  hover:bg-red-400 hover:text-white";
   return (
     <>
-      <section className="w-full px-1">
-        <div className="w-full md:px-5 mx-auto">
-          {/* classes overview section */}
-          <div className="flex justify-between w-full mx-auto flex-wrap md:flex-nowrap px-0 md:px-10">
-            {SchoolClass.map((classes) => (
+          <div className="flex justify-center w-full mx-auto flex-wrap">
+            {AcademicClass.map((classes) => (
               <Link
                 key={classes.id}
                 onClick={() => moveClasses(classes.id)}
@@ -44,18 +41,12 @@ const AcademicHeader = () => {
             ))}
           </div>
           <>
-            {SchoolClass?.map((classes) => (
+            {AcademicClass?.map((classes) => (
               <div className="w-full mx-auto text-xs" key={classes.id}>
-                {Number(classes.id) === Number(classID) ? (
-                  <>{classes?.content}</>
-                ) : (
-                  <div className="hidden">There is no class</div>
-                )}
+                {Number(classes.id) === Number(classID) && <>{classes?.content}</>}
               </div>
             ))}
-          </>
-        </div>
-      </section>
+          </>   
     </>
   );
 };

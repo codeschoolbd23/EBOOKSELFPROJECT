@@ -15,7 +15,7 @@ const Memo = (Subjects) => {
   return (
     <>
       <section className="w-full px-1">
-        <div className="w-full md:px-5 mx-auto">
+        <div className="w-full  mx-auto">
           {/* subject overview section */}
           <div className="flex w-full mx-auto flex-wrap md:flex-nowrap px-0 md:px-10">
             {Subjects?.map((subject) => (

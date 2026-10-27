@@ -4,20 +4,20 @@ import layoutProfile from "../../../assets/layoutProfile.png";
 export default function Home() {
   return (
     <div
-      className="relative text-center container m-0 min-h-150"
+      className="relative text-center w-full  min-h-180"
     >
       <div className="absolute right-0">
         <Calendar />
       </div>
       <div className="flex flex-col justify-center items-center">
-        <h2 className="textarea-ghost">
+        <h2>
           জীবনের শ্রেষ্ঠ সম্পদ
-          <div className="badge badge-secondary p-2 rotate-6 font-extrabold text-2xl">
+          <div className="badge badge-secondary p-2 rotate-6 font-extrabold text-xl">
             পড়া
           </div>
         </h2>
-        <div className="avatar aura aura-rainbow rounded-full p-6">
-          <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring-2 ring-offset-2">
+        <div className="avatar aura aura-rainbow rounded-full p-5">
+          <div className="ring-primary ring-offset-base-100 w-40 rounded-full ring-2 ring-offset-2">
             <img alt="layoutProfile" src={layoutProfile} />
           </div>
         </div>

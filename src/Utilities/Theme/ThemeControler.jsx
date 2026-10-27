@@ -29,7 +29,7 @@ const ThemeControler = ({ class_name }) => {
               <input
                 type="radio"
                 name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-outline hover:bg-primary border-0"
+                className="theme-controller btn btn-sm btn-outline hover:bg-primary "
                 aria-label={cl.color_value}
                 value={cl.color_value}
               />

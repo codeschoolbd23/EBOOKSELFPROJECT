@@ -139,7 +139,7 @@ export default function SiteBar({ sub ,topic }) {
         </span>
       </div>
 
-      {/* PDF Document Container */}
+      {/* PDF Document w-full */}
       <div
         className="flex w-full justify-between"
         style={{

@@ -19,8 +19,8 @@ const Navbar = () => {
   };  
   const classCSS = "dropdown-content menu bg-fuchsia-500 z-1 w-fit p-2";
   return (
-    <div className="sticky top-0 shadow-xs rounded-none container bg-white z-10 border-0">
-      <div className="container">
+    <div className="sticky top-0 shadow-xs rounded-none w-full bg-white z-10 ">
+      <div className="w-full">
         <div className="collapse-title navbar">
           <div className="navbar-start">
             <Link to="/" className="text-xl flex items-center gap-1 font-bold">
@@ -38,7 +38,7 @@ const Navbar = () => {
                 // onChange={handleSubmit}
                 type="text"
                 name="page"
-                className="input font-thin text-black border-0 badge-ghost"
+                className="input font-thin text-black  badge-ghost"
                 placeholder="Search by book name"
                 title="Search keyword: book name/class/writer"
               />

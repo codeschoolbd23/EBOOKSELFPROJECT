@@ -13,17 +13,17 @@ const Footer = () => {
                 <span className="text-fuchsia-400">//</span>
                 <span className="text-green-300 text-xl">সেলফ</span>
               </h6>
-              <img className="h-30 w-40" alt="Diamond CSS mask" src={logo1} />
+              <img className="h-30 w-40" alt="EBOOKSELF LOGO" src={logo1} />
             </div>
           </Link>
         </div>
       </nav>
       <nav>
         <h6 className="footer-title">শিক্ষাপ্রতিষ্ঠান</h6>
-        <Link to="/school" className="link link-hover">
+        <Link to="/academic" className="link link-hover">
           বিদ্যালয়
         </Link>
-        <Link to="/college" className="link link-hover">
+        <Link className="link link-hover">
           কলেজ
         </Link>
         <Link to="/university" className="link link-hover">

@@ -72,7 +72,7 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
             <input
               type="number"
               name="page"
-              className="input-xs border-0 bg-base-300 rounded-xl text-center w-fit italic font-thin"
+              className="input-xs  bg-base-300 rounded-xl text-center w-fit italic font-thin"
               placeholder="Enter page no"
               // defaultValue={1}
               min="1" // Prevents entering negative pages
@@ -121,7 +121,7 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
         </span>
       </div>
 
-      {/* PDF Document Container */}
+      {/* PDF Document w-full */}
       <div className="flex w-full justify-between">
         <div className="w-2/12  text-blue flex flex-col h-screen m-0 overflow-scroll">
           <div className="badge-ghost">অধ্যায় সমূহ</div>

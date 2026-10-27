@@ -80,7 +80,7 @@ const route = createBrowserRouter([
   }
 ]);
 export default function Router() {
-  return <div className="container border-0 m-0 p-0">
+  return <div className="w-full">
   <RouterProvider router={route} />
   </div>
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo1 from "../../../assets/logo1.png";
 import { useNavigate } from "react-router-dom";
+import ThemeControler from '../../../Utilities/Theme/ThemeControler';
 // import Voice from '../../../Utilities/Voice/Voice';
 // import Search from '../../../Utilities/search/Search';
 const Navbar = () => {
@@ -84,7 +85,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              
+              <li><ThemeControler/></li>
             </ul>
           </div>
         </div>

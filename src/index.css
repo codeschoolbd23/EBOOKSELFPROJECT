@@ -2,7 +2,21 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @tailwind utilities;
+@plugin "daisyui" {
+  themes: light --default, synthwave --preferssynthwave;
+}:root,
+[data-theme] {
+  background-color: var(--root-bg);
+  color: var(--color-base-content);
+}
 
+:root {
+  background-color: var(--page-scroll-bg, var(--root-bg));
+}
+
+:where(:root, [data-theme]) {
+  --root-bg: var(--color-base-100);
+}
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -37,8 +51,8 @@ html, body, #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+  @media (max-width: 100%) {
+    font-size: 24px;
   }
 }
 
@@ -68,7 +82,7 @@ body {
 
 #root {
   /* width: 1126px; */
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   /* border-inline: 1px solid var(--border); */

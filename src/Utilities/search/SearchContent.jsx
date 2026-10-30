@@ -27,6 +27,9 @@ import Physics9 from "../../Documentation/E_Book_Self/SSC_TEXT/Physics9.pdf";
 import Science9 from "../../Documentation/E_Book_Self/SSC_TEXT/Science9.pdf";
 import BGS9 from "../../Documentation/E_Book_Self/SSC_TEXT/BGS9.pdf";
 import ICT9 from "../../Documentation/E_Book_Self/SSC_TEXT/ICT9.pdf";
+import ICT_IX_2 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_2.pdf";
+import ICT_IX_3_1 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_3.1.pdf";
+import ICT_IX_3_2 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_3.2.pdf";
 import ClassNineChemistry from "../../Documentation/E_Book_Self/SSC_TEXT/ClassNineChemistry.pdf";
 import SearchPage from "./SearchPage";
 const books = [
@@ -53,7 +56,7 @@ const books = [
     author: "NCTB(National Curiculam Text Book Board)",
     content: BGS_4,
     keyword: "চতুর্থ শ্রেণি (Class Four) বাংলাদেশ ও বিশ্বপরিচয় (চতুর্থ শ্রেণি)",
-  }, 
+  },
   {
     id: 14,
     section: "পঞ্চম শ্রেণি (Class Five)",
@@ -78,7 +81,7 @@ const books = [
     content: BGS_5,
     keyword: "পঞ্চম শ্রেণি (Class Five) বাংলাদেশ ও বিশ্বপরিচয়(পঞ্চম শ্রেণি)",
   },
-  
+
   {
     id: 19,
     section: "ষষ্ঠ শ্রেণি (Class Six)",
@@ -103,14 +106,15 @@ const books = [
     content: BGS_6,
     keyword: "ষষ্ঠ শ্রেণি (Class Six) বাংলাদেশ ও বিশ্বপরিচয়",
   },
-  
+
   {
     id: 23,
     section: "ষষ্ঠ শ্রেণি (Class Six)",
-    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 6",
+    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 6",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ICT_6,
-    keyword: "ষষ্ঠ শ্রেণি (Class Six) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 6",
+    keyword:
+      "ষষ্ঠ শ্রেণি (Class Six) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 6",
   },
   {
     id: 29,
@@ -144,23 +148,25 @@ const books = [
     content: BGS_7,
     keyword: "সপ্তম শ্রেণি (Class Seven) বাংলাদেশ ও বিশ্বপরিচয়",
   },
-  
+
   {
     id: 34,
     section: "সপ্তম শ্রেণি (Class Seven)",
-    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 7",
+    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 7",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ICT_7,
-    keyword: "সপ্তম শ্রেণি (Class Seven) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 7",
+    keyword:
+      "সপ্তম শ্রেণি (Class Seven) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 7",
   },
-  
+
   {
     id: 39,
     section: "অষ্টম শ্রেণি (Class Seven)",
     name: "বাংলা ব্যাকরণ (Bangla Grammar Class 8)",
     author: "NCTB(National Curiculam Text Book Board)",
     content: BanglaBakoron_8,
-    keyword: "অষ্টম শ্রেণি (Class Seven) বাংলা ব্যাকরণ (Bangla Grammar Class 8)",
+    keyword:
+      "অষ্টম শ্রেণি (Class Seven) বাংলা ব্যাকরণ (Bangla Grammar Class 8)",
   },
   {
     id: 40,
@@ -186,23 +192,25 @@ const books = [
     content: BGS_8,
     keyword: "অষ্টম শ্রেণি (Class Seven) বাংলাদেশ ও বিশ্বপরিচয়",
   },
-  
+
   {
     id: 44,
     section: "অষ্টম শ্রেণি (Class Seven)",
-    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 8",
+    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 8",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ICT_8,
-    keyword: "অষ্টম শ্রেণি (Class Seven) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 8",
+    keyword:
+      "অষ্টম শ্রেণি (Class Seven) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 8",
   },
-  
+
   {
     id: 49,
     section: "নবম শ্রেণি (Class 9-10)",
     name: "বাংলা ব্যাকরণ (Bangla Grammar) Class 9-10",
     author: "NCTB(National Curiculam Text Book Board)",
     content: BanglaGrammar9,
-    keyword: "নবম শ্রেণি (Class 9-10) বাংলা ব্যাকরণ (Bangla Grammar) Class 9-10",
+    keyword:
+      "নবম শ্রেণি (Class 9-10) বাংলা ব্যাকরণ (Bangla Grammar) Class 9-10",
   },
   {
     id: 50,
@@ -252,16 +260,17 @@ const books = [
     content: BGS9,
     keyword: "নবম শ্রেণি (Class 9-10) বাংলাদেশ ও বিশ্বপরিচয় Class 9-10",
   },
-  
+
   {
     id: 58,
     section: "নবম শ্রেণি (Class 9-10)",
-    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 9-10 ",
+    name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 9-10 ",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ICT9,
-    keyword: "নবম শ্রেণি (Class 9-10) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) Class 9-10 ",
+    keyword:
+      "নবম শ্রেণি (Class 9-10) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 9-10 ",
   },
-  
+
   {
     id: 63,
     section: "নবম শ্রেণি (Class 9-10)",
@@ -269,6 +278,33 @@ const books = [
     author: "NCTB(National Curiculam Text Book Board)",
     content: ClassNineChemistry,
     keyword: "নবম শ্রেণি (Class 9-10) রসায়ন (Chemistry) Class 9-10",
+  },
+  {
+    id: 64,
+    section: "একাদশ - দ্বাদশ (Class Eleven Twelve)",
+    name: "আইসিটি-2 (তথ্য ও যোগাযোগ প্রযুক্তি-2) ICT Class 11-12",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: ICT_IX_2,
+    keyword:
+      "একাদশ - দ্বাদশ (Class Eleven Twelve) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 11-12",
+  },
+  {
+    id: 65,
+    section: "একাদশ - দ্বাদশ (Class Eleven Twelve)",
+    name: "আইসিটি-3.1 (তথ্য ও যোগাযোগ প্রযুক্তি-3.1) ICT Class 11-12",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: ICT_IX_3_1,
+    keyword:
+      "একাদশ - দ্বাদশ (Class Eleven Twelve) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 11-12",
+  },
+  {
+    id: 66,
+    section: "একাদশ - দ্বাদশ (Class Eleven Twelve)",
+    name: "আইসিটি-3.2 (তথ্য ও যোগাযোগ প্রযুক্তি-3.2) ICT Class 11-12",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: ICT_IX_3_2,
+    keyword:
+      "একাদশ - দ্বাদশ (Class Eleven Twelve) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 11-12",
   },
 ];
 const SearchContent= () => {

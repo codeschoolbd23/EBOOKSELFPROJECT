@@ -1,4 +1,7 @@
 import React from 'react';
+import One from "../../Documentation/components/images/One.png";
+import Two from "../../Documentation/components/images/Two.png";
+import Three from "../../Documentation/components/images/Four.png";
 import Four from "../../Documentation/components/images/Four.png";
 import Five from "../../Documentation/components/images/Five.jpg";
 import Six from "../../Documentation/components/images/Six.png";
@@ -9,14 +12,18 @@ import HSC_ICT from "../../Documentation/components/images/hsc_ict.jpg";
 
 const ClassLayout = ({X}) => {
   const imagX=[
-    {id:1,classX:"Four",imG:Four,},
-    {id:2,classX:"Five",imG:Five,},
-    {id:3,classX:"Six",imG:Six,},
-    {id:4,classX:"Seven",imG:Seven,},
-    {id:5,classX:"Eight",imG:Eight,},
-    {id:6,classX:"Nine",imG:Nine,},
-    {id:7,classX:"Eleven",imG:HSC_ICT,},
-    {id:8,classX:"Twelve",imG:HSC_ICT,},
+    {id:1,classX:"One",imG:One,},
+    {id:2,classX:"Two",imG:Two,},
+    {id:3,classX:"Three",imG:Three,},
+    {id:4,classX:"Four",imG:Four,},
+    {id:5,classX:"Five",imG:Five,},
+    {id:6,classX:"Six",imG:Six,},
+    {id:7,classX:"Seven",imG:Seven,},
+    {id:8,classX:"Eight",imG:Eight,},
+    {id:10,classX:"Nine",imG:Nine,},
+    {id:11,classX:"Ten",imG:Nine,},
+    {id:12,classX:"Eleven",imG:HSC_ICT,},
+    {id:13,classX:"Twelve",imG:HSC_ICT,},
   ]
   const text="আমরা আমাদের গ্রাহকদের জন্য সেরা এবং মানসম্মত সেবা নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ। দীর্ঘদিনের অভিজ্ঞতা এবং দক্ষ টিমের মাধ্যমে আমরা প্রতিনিয়ত নতুন নতুন প্রযুক্তি ও উদ্ভাবনী আইডিয়া নিয়ে কাজ করে যাচ্ছি। আমাদের মূল লক্ষ্য হলো সততা, নিষ্ঠা এবং উন্নত সেবার মাধ্যমে গ্রাহকদের সন্তুষ্টি অর্জন করা এবং তাদের স্বপ্নকে বাস্তবে রূপ দেওয়া।"
     console.log(X)

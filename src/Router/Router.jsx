@@ -23,6 +23,7 @@ import AcademicLayout from "../Documentation/Academic/AcademicLayout";
 
 import Five from "../Documentation/Academic/Five";
 import One from "../Documentation/Academic/One";
+import Two from "../Documentation/Academic/Two";
 
 const route = createBrowserRouter([
   {
@@ -38,6 +39,7 @@ const route = createBrowserRouter([
     children: [
       { path: "/academic", element: <Academic /> },
       { path: "/academic/One", element: <One />,},
+      { path: "/academic/Two", element: <Two />,},
       { path: "/academic/Four", element: <Four />,},
       { path: "/academic/Five", element: <Five /> },
       { path: "/academic/Six", element: <Six /> },

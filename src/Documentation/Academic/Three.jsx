@@ -1,38 +1,50 @@
 import SubjectMemi from '../../Utilities/subjectsHandlar/SubjectMemi';
-import Math_4 from "../../../public/Math_4.pdf";
-import Science_4 from "../../../public/Science_4.pdf";
-import BGS_4 from "../../../public//BGS_4.pdf";
+import Math_3 from "../E_Book_Self/THREE_TEXT/Math_3.pdf";
+import Science_5 from "../E_Book_Self/FIVE_TEXT/Science_5.pdf";
+import Bangla_3 from "../E_Book_Self/THREE_TEXT/Bangla_3.pdf";
 import Demi from '../../Utilities/subjectsHandlar/Demi';
 import SubjectTopics from '../../Utilities/subjectsHandlar/SubjectTopics';
 
-const { Topics_BGS_4, Topics_Math_4, Topics_Science_4} = SubjectTopics;
+const {Topics_BGS_5,Topics_Science_5}=SubjectTopics;
 const Subjects = [
   {
-    id: 2,
-    name: "গণিত",
+    id: 1,
+    name: "আমার বাংলা বই",
     class: "Three",
-    content: <SubjectMemi sub={Math_4} topic={Topics_Math_4} />,
+    content: <SubjectMemi sub={Bangla_3} topic={Topics_BGS_5} />,
+  },
+  {
+    id: 2,
+    name: "প্রাথমিক গণিত",
+    class: "Three",
+    content: <SubjectMemi sub={Math_3} topic={Topics_BGS_5} />,
   },
 
   {
     id: 3,
-    name: "বা.বি.প",
+    name: "English For Today",
     class: "Three",
-    content: <SubjectMemi sub={BGS_4} topic={Topics_BGS_4} />,
+    content: <SubjectMemi sub={Science_5} topic={Topics_BGS_5} />,
   },
 
   {
     id: 4,
+    name: "বা.বি.প",
+    class: "Three",
+    content: <SubjectMemi sub={Science_5} topic={Topics_BGS_5} />,
+  },
+
+  {
+    id: 5,
     name: "বিজ্ঞান",
     class: "Three",
-    content: <SubjectMemi sub={Science_4} topic={Topics_Science_4} />,
+    content: <SubjectMemi sub={Science_5} topic={Topics_Science_5} />,
   },
 ];
 const Three = () => {
   console.log(Subjects);
   return (
     <>
-    
       <Demi sub={Subjects}/>
     </>
   );

@@ -1,4 +1,13 @@
 import React  from "react";
+import Bangla_1 from "../../Documentation/E_Book_Self/ONE_TEXT/Bangla_1.pdf";
+import Math_1 from "../../Documentation/E_Book_Self/ONE_TEXT/Math_1.pdf";
+import English_1 from "../../Documentation/E_Book_Self/ONE_TEXT/English_1.pdf";
+import Bangla_2 from "../../Documentation/E_Book_Self/TWO_TEXT/Bangla_2.pdf";
+import Math_2 from "../../Documentation/E_Book_Self/TWO_TEXT/Math_2.pdf";
+import Bangla_3 from "../../Documentation/E_Book_Self/THREE_TEXT/Bangla_3.pdf";
+import Math_3 from "../../Documentation/E_Book_Self/THREE_TEXT/Math_3.pdf";
+import BGS_3 from "../../Documentation/E_Book_Self/THREE_TEXT/BGS_3.pdf";
+import Science_3 from "../../Documentation/E_Book_Self/THREE_TEXT/Science_3.pdf";
 import Math_4 from "../../../public/Math_4.pdf";
 import Science_4 from "../../../public/Science_4.pdf";
 import BGS_4 from "../../../public/BGS_4.pdf";
@@ -34,6 +43,79 @@ import ICT_IX_3_2 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_3.2.pdf"
 import ClassNineChemistry from "../../Documentation/E_Book_Self/SSC_TEXT/ClassNineChemistry.pdf";
 import SearchPage from "./SearchPage";
 const books = [
+  {
+    id: 1,
+    section: "প্রথম শ্রেণি (Class One)",
+    name: "প্রাথমিক বাংলা (প্রথম শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: Bangla_1,
+    keyword: "প্রথম শ্রেণি (Class One) প্রাথমিক বাংলা (প্রথম শ্রেণি) Bangla",
+  },
+  {
+    id: 2,
+    section: "প্রথম শ্রেণি (Class One)",
+    name: "প্রাথমিক গণিত (প্রথম শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: Math_1,
+    keyword: "প্রথম শ্রেণি (Class One) প্রাথমিক গণিত (প্রথম শ্রেণি) Math",
+  },
+  {
+    id: 3,
+    section: "প্রথম শ্রেণি (Class One)",
+    name: "English For Today (প্রথম শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: English_1,
+    keyword: "প্রথম শ্রেণি (Class One) English For Today (প্রথম শ্রেণি)",
+  },
+  {
+    id: 4,
+    section: "দ্বিতীয় শ্রেণি (Class Two)",
+    name: "প্রাথমিক বাংলা (দ্বিতীয় শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: Bangla_2,
+    keyword: "দ্বিতীয় শ্রেণি (Class Two) প্রাথমিক বাংলা (দ্বিতীয় শ্রেণি) Bangla",
+  },
+  {
+    id: 5,
+    section: "দ্বিতীয় শ্রেণি (Class Two)",
+    name: "প্রাথমিক গণিত (দ্বিতীয় শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: Math_2,
+    keyword: "দ্বিতীয় শ্রেণি (Class Two) প্রাথমিক গণিত (দ্বিতীয় শ্রেণি) Math",
+  },
+ 
+  {
+    id: 7,
+    section: "তৃতীয় শ্রেণি (Class Three)",
+    name: "প্রাথমিক গণিত (তৃতীয় শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: Math_3,
+    keyword: "তৃতীয় শ্রেণি (Class Three) প্রাথমিক গণিত (তৃতীয় শ্রেণি) Math",
+  },
+  {
+    id: 8,
+    section: "তৃতীয় শ্রেণি (Class Three)",
+    name: "প্রাথমিক বিজ্ঞান (তৃতীয় শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: Science_3,
+    keyword: "তৃতীয় শ্রেণি (Class Three) প্রাথমিক বিজ্ঞান (তৃতীয় শ্রেণি)",
+  },
+  {
+    id: 69,
+    section: "তৃতীয় শ্রেণি (Class Three)",
+    name: "বাংলাদেশ ও বিশ্বপরিচয় (তৃতীয় শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: BGS_3,
+    keyword: "তৃতীয় শ্রেণি (Class Three) বাংলাদেশ ও বিশ্বপরিচয় (তৃতীয় শ্রেণি)",
+  },
+  {
+    id: 70,
+    section: "তৃতীয় শ্রেণি (Class Three)",
+    name: "প্রাথমিক বাংলা (তৃতীয় শ্রেণি)",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: Bangla_3,
+    keyword: "তৃতীয় শ্রেণি (Class Three) প্রাথমিক বাংলা (তৃতীয় শ্রেণি)",
+  },
   {
     id: 9,
     section: "চতুর্থ শ্রেণি (Class Four)",

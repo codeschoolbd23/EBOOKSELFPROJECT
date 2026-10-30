@@ -16,56 +16,56 @@ const Subjects = [
   {
     id: 2,
     name: "বাংলা ব্যাকরণ",
-    
+    class:"Nine",
     content: <SubjectMemi sub={BanglaGrammar9} topic={Topics_BGS_9} />,
   },
  
   {
     id: 3,
     name: "গণিত",
-    
+    class:"Nine",
     content: <SubjectMemi sub={ClassNineMath} topic={Topics_BGS_9} />,
   },
   {
     id: 6,
     name: "রসায়ন",
-    
+    class:"Nine",
     content: <SubjectMemi sub={ClassNineChemistry} topic={Topics_BGS_9} />,
   },
   {
     id: 7,
     name: "পদার্থবিজ্ঞান",
-    
+    class:"Nine",
     content: <SubjectMemi sub={Physics9} topic={Topics_BGS_9} />,
   },
   {
     id: 8,
     name: "জীববিজ্ঞান",
-    
+    class:"Nine",
     content: <SubjectMemi sub={Biology9} topic={Topics_BGS_9} />,
   },
   {
     id: 9,
     name: "উচ্চতর গণিত",
-    
+    class:"Nine",
     content: <SubjectMemi sub={ClassNineHigherMath} topic={Topics_BGS_9} />,
   },
   {
     id: 10,
     name: "বা.বি.প",
-    
+    class:"Nine",
     content: <SubjectMemi sub={BGS9} topic={Topics_BGS_9} />,
   },
   {
     id: 11,
     name: "ICT",
-    
+    class:"Nine",
     content: <SubjectMemi sub={ICT9} topic={Topics_BGS_9} />,
   },
   {
     id: 12,
     name: "বিজ্ঞান",
-    
+    class:"Nine",
     content: <SubjectMemi sub={Science9} topic={Topics_BGS_9} />,
   },
   

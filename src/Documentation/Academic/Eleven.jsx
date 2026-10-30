@@ -9,12 +9,14 @@ const Subjects = [
   {
     id: 2,
     name: "প্রথম অধ্যায়",
+    class:"Eleven",
     content: <SubjectMemi sub={Math_4} topic={Topics_BGS_9}/>,
   },
 
   {
     id: 3,
     name: "দ্বিতীয় অধ্যায়",
+    class:"Eleven",
     
     content: <SubjectMemi sub={BGS_4} topic={Topics_BGS_9}/>,
   },
@@ -22,6 +24,7 @@ const Subjects = [
   {
     id: 4,
     name: "তৃতীয় অধ্যায়",
+    class:"Eleven",
     
     content: <SubjectMemi sub={Science_4} topic={Topics_BGS_9}/>,
   },

@@ -21,16 +21,20 @@ const Navbar = () => {
   };  
   const classCSS = "dropdown-content menu bg-fuchsia-500 z-1 w-fit p-2";
   return (
-    <div className="sticky top-0 shadow-xs rounded-none w-full bg-white z-10 ">
-      <div className="w-full">
+    <div className="sticky top-0 border-b border-purple-900/20 bg-slate-950/80 backdrop-blur-md z-50 ">
+      <div className="bg-slate-950 text-purple-100 font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden relative">
         <div className="collapse-title navbar">
+          {/* Synthwave Retro Sun & Grid Background Effect */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0)_60%,rgba(219,39,119,0.1)_100%)] pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-b from-pink-600 to-amber-500 rounded-full blur-[120px] opacity-20 pointer-events-none" />
           <div className="navbar-start">
-            <Link to="/" className="text-xl flex items-center gap-1 font-bold">
-              <img src={logo1} alt="Logo" className="h-12 w-14" />
-              <span className="text-amber-400">ই-বুক</span>
-              <span className="text-2xl font-extrabold text-fuchsia-400">
-                //
-              </span>
+            <Link
+              to="/"
+              className="flex items-center text-4xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+            >
+              <img src={logo1} alt="Logo" className="h-16 w-18" />
+              <span className="text-amber-400 ml-1">ই-বুক</span>
+              <span className="text-fuchsia-400">//</span>
               <span className="text-green-300">সেলফ</span>
             </Link>
           </div>
@@ -40,7 +44,7 @@ const Navbar = () => {
                 // onChange={handleSubmit}
                 type="text"
                 name="page"
-                className="input font-thin text-black  badge-ghost"
+                className="input font-thin text-black  badge-ghost bg-amber-50"
                 placeholder="Search by book name"
                 title="Search keyword: book name/class/writer"
               />
@@ -85,14 +89,16 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li><ThemeControler/></li>
+              <li>
+                <ThemeControler />
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <Link
         to="/aichat"
-        role='btn'
+        role="btn"
         className="absolute right-0 top-100 bottom-0 flex"
       >
         <div className="chat chat-end">

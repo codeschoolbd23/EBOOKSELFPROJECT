@@ -3,19 +3,20 @@ import Calendar from './../../Shared/calendar/Calendar';
 import layoutProfile from "../../../assets/layoutProfile.png";
 export default function Home() {
   return (
-    <div
-      className="relative text-center w-full"
-    >
+    <div className="relative text-center w-full min-h-screen">
+      {/* Ambient background glow behind avatars */}
+      <div className="absolute inset-0 bg-pink-500/20 blur-3xl rounded-full pointer-events-none" />
+
       <div className="absolute right-0">
         <Calendar />
       </div>
       <div className="flex flex-col justify-center items-center">
-        <h2>
+        <p>
           জীবনের শ্রেষ্ঠ সম্পদ
           <div className="badge badge-secondary p-2 rotate-6 font-extrabold text-xl">
             পড়া
           </div>
-        </h2>
+        </p>
         <div className="avatar aura aura-rainbow rounded-full p-5">
           <div className="ring-primary ring-offset-base-100 w-40 rounded-full ring-2 ring-offset-2">
             <img alt="layoutProfile" src={layoutProfile} />

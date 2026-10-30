@@ -11,32 +11,32 @@ const Subjects = [
   {
     id: 3,
     name: "বাংলা ব্যাকরণ",
-    
+    class:"Six",
     content: <SubjectMemi sub={Banglabekoron_6} topic={Topics_BGS_9}/>,
   },
   {
     id: 4,
     name: "গণিত",
-    
+    class:"Six",
     content: <SubjectMemi sub={Math_6} topic={Topics_BGS_9}/>,
   },
 
   {
     id: 5,
     name: "বা.বি.প",
-    
+    class:"Six",
     content: <SubjectMemi sub={BGS_6} topic={Topics_BGS_9}/>,
   },
   {
     id: 6,
     name: "ICT",
-    
+    class:"Six",
     content: <SubjectMemi sub={ICT_6} topic={Topics_BGS_9}/>,
   },
   {
     id: 7,
     name: "বিজ্ঞান",
-    
+    class:"Six",
     content: <SubjectMemi sub={Science_6} topic={Topics_BGS_9}/>,
   },
  

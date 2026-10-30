@@ -8,41 +8,6 @@ export default function App() {
       {/* Synthwave Retro Sun & Grid Background Effect */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0)_60%,rgba(219,39,119,0.1)_100%)] pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-b from-pink-600 to-amber-500 rounded-full blur-[120px] opacity-20 pointer-events-none" />
-
-      {/* Header / Navigation */}
-      <header className="border-b border-purple-900/50 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">
-              NEON ACADEMY
-            </span>
-          </div>
-          <nav className="hidden md:flex space-x-8 text-sm font-medium tracking-wider text-purple-300">
-            <a
-              href="#home"
-              className="hover:text-cyan-400 transition-colors duration-300"
-            >
-              হোম
-            </a>
-            <a
-              href="#features"
-              className="hover:text-pink-500 transition-colors duration-300"
-            >
-              বৈশিষ্ট্য
-            </a>
-            <a
-              href="#quote"
-              className="hover:text-purple-400 transition-colors duration-300"
-            >
-              উক্তি
-            </a>
-          </nav>
-          <button className="px-5 py-2 rounded-md bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold text-sm tracking-wide uppercase shadow-[0_0_15px_rgba(219,39,119,0.5)] hover:shadow-[0_0_25px_rgba(219,39,119,0.8)] transition-all duration-300 border border-pink-400/30">
-            ভর্তি হোন
-          </button>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <main
         id="home"

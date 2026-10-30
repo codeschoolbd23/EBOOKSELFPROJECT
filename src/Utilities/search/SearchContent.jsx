@@ -27,6 +27,7 @@ import Physics9 from "../../Documentation/E_Book_Self/SSC_TEXT/Physics9.pdf";
 import Science9 from "../../Documentation/E_Book_Self/SSC_TEXT/Science9.pdf";
 import BGS9 from "../../Documentation/E_Book_Self/SSC_TEXT/BGS9.pdf";
 import ICT9 from "../../Documentation/E_Book_Self/SSC_TEXT/ICT9.pdf";
+import ICT_IX_1 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_1.pdf";
 import ICT_IX_2 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_2.pdf";
 import ICT_IX_3_1 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_3.1.pdf";
 import ICT_IX_3_2 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_3.2.pdf";
@@ -303,6 +304,15 @@ const books = [
     name: "আইসিটি-3.2 (তথ্য ও যোগাযোগ প্রযুক্তি-3.2) ICT Class 11-12",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ICT_IX_3_2,
+    keyword:
+      "একাদশ - দ্বাদশ (Class Eleven Twelve) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 11-12",
+  },
+  {
+    id: 67,
+    section: "একাদশ - দ্বাদশ (Class Eleven Twelve)",
+    name: "আইসিটি-1 (তথ্য ও যোগাযোগ প্রযুক্তি-1) ICT Class 11-12",
+    author: "NCTB(National Curiculam Text Book Board)",
+    content: ICT_IX_1,
     keyword:
       "একাদশ - দ্বাদশ (Class Eleven Twelve) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 11-12",
   },

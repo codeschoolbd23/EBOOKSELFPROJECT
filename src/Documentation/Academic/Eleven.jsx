@@ -1,4 +1,5 @@
 import SubjectMemi from '../../Utilities/subjectsHandlar/SubjectMemi';
+import ICT_IX_1 from "../E_Book_Self/HSC_TEXT/ICT_IX_1.pdf";
 import ICT_IX_2 from "../E_Book_Self/HSC_TEXT/ICT_IX_2.pdf"
 import ICT_IX_3_1 from "../E_Book_Self/HSC_TEXT/ICT_IX_3.1.pdf"
 import ICT_IX_3_2 from "../E_Book_Self/HSC_TEXT/ICT_IX_3.2.pdf"
@@ -7,10 +8,10 @@ import SubjectTopics from '../../Utilities/subjectsHandlar/SubjectTopics';
 const {Topics_BGS_9}=SubjectTopics;
 const Subjects = [
   {
-    id: 2,
+    id: 1,
     name: "১:তথ্য ও যোগাযোগ প্রযুক্তি",
     class: "Eleven",
-    content: <SubjectMemi sub={ICT_IX_2} topic={Topics_BGS_9} />,
+    content: <SubjectMemi sub={ICT_IX_1} topic={Topics_BGS_9} />,
   },
 
   {

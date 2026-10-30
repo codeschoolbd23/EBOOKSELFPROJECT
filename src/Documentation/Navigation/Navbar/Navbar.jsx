@@ -51,8 +51,8 @@ const Navbar = () => {
             </form>
             {/* <Voice/> */}
           </div>
-          <div className="navbar-end flex text-2xl text-primary">
-            <ul className="menu menu-horizontal flex-nowrap ">
+          <div className="navbar-end flex">
+            <ul className="menu menu-horizontal flex-nowrap text-2xl text-primary">
               <li>
                 <Link to="/academic">একাডেমিক বই</Link>
               </li>

@@ -3,7 +3,8 @@ import logo1 from "../../../assets/logo1.png";
 import { Link } from "react-router";
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal text-primary px-15 pt-20 pb-5">
+    <footer className="relative shadow-2xl shadow-amber-100 footer sm:footer-horizontal text-primary px-15 pt-20 pb-5">
+      <div className="absolute inset-0 bg-pink-500/20 blur-3xl rounded-full pointer-events-none" />
       <nav className="mask mask-diamond w-48 h-48 bg-black">
         <div className="px-10 pt-12">
           <Link to="/">
@@ -23,9 +24,7 @@ const Footer = () => {
         <Link to="/academic" className="link link-hover">
           বিদ্যালয়
         </Link>
-        <Link className="link link-hover">
-          কলেজ
-        </Link>
+        <Link className="link link-hover">কলেজ</Link>
         <Link to="/university" className="link link-hover">
           বিশ্ববিদ্যালয়
         </Link>
@@ -33,7 +32,9 @@ const Footer = () => {
       </nav>
       <nav>
         <h6 className="footer-title">যোগাযোগ</h6>
-        <Link to="/about" className="link link-hover">আমাদের সম্পর্ক</Link>
+        <Link to="/about" className="link link-hover">
+          আমাদের সম্পর্ক
+        </Link>
         <Link className="link link-hover">যোগাযোগ মাধ্যম</Link>
         <Link className="link link-hover">জব</Link>
         <Link className="link link-hover">অন্যান্য</Link>

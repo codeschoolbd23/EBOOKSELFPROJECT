@@ -5,6 +5,8 @@ import Six from "../../Documentation/components/images/Six.png";
 import Seven from "../../Documentation/components/images/Seven.png";
 import Eight from "../../Documentation/components/images/Two.png";
 import Nine from "../../Documentation/components/images/Six.png";
+import HSC_ICT from "../../Documentation/components/images/hsc_ict.jpg";
+
 const ClassLayout = ({X}) => {
   const imagX=[
     {id:1,classX:"Four",imG:Four,},
@@ -13,17 +15,18 @@ const ClassLayout = ({X}) => {
     {id:4,classX:"Seven",imG:Seven,},
     {id:5,classX:"Eight",imG:Eight,},
     {id:6,classX:"Nine",imG:Nine,},
+    {id:7,classX:"Eleven",imG:HSC_ICT,},
+    {id:8,classX:"Twelve",imG:HSC_ICT,},
   ]
   const text="আমরা আমাদের গ্রাহকদের জন্য সেরা এবং মানসম্মত সেবা নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ। দীর্ঘদিনের অভিজ্ঞতা এবং দক্ষ টিমের মাধ্যমে আমরা প্রতিনিয়ত নতুন নতুন প্রযুক্তি ও উদ্ভাবনী আইডিয়া নিয়ে কাজ করে যাচ্ছি। আমাদের মূল লক্ষ্য হলো সততা, নিষ্ঠা এবং উন্নত সেবার মাধ্যমে গ্রাহকদের সন্তুষ্টি অর্জন করা এবং তাদের স্বপ্নকে বাস্তবে রূপ দেওয়া।"
     console.log(X)
     return (
       <div className="min-h-screen">
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0)_60%,rgba(219,39,119,0.1)_100%)] pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-b from-pink-600 to-amber-500 rounded-full blur-[120px] opacity-20 pointer-events-none" />
         <div className="flex">
-          <div className="w-1/2">
-            <div className="mx-auto p-1">
-              <div className="p-10 w-full  flex items-center justify-center overflow-hidden">
+          <div className="w-2/5 bg-white p-1">
+            <div className="mx-auto">
+              <div className="flex items-center justify-center">
                 {imagX?.map((im) => (
                   <div key={im?.id}>
                     {im?.classX === X && (
@@ -34,11 +37,21 @@ const ClassLayout = ({X}) => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 flex flex-col justify-center items-center">
-            <span className="text-5xl font-bold text-blue-500 text-wrap text-justify">
+          <div className="w-3/5 flex flex-col justify-center items-center h-screen pt-32 overflow-scroll">
+            <span className="text-5xl font-bold text-blue-500 text-wrap text-start p-1">
               Here, the books of {X} are avaiable
             </span>
-            <p className="p-3 text-wrap text-justify">{text}</p>
+            <div className='p-3'>
+              <p className="p-1 text-wrap text-justify italic">{text}</p>
+              <p className="p-1 text-wrap text-justify">{text}</p>
+              <p className="p-1 text-wrap text-justify">{text}</p>
+              <p className="p-1 text-wrap text-justify">{text}</p>
+              <p className="p-1 text-wrap text-justify">{text}</p>
+              <p className="p-1 text-wrap text-justify">{text}</p>
+              <p className="p-1 text-wrap text-justify">{text}</p>
+              <p className="p-1 text-wrap text-justify">{text}</p>
+            </div>
+
             <button className="btn btn-primary">Home</button>
           </div>
         </div>

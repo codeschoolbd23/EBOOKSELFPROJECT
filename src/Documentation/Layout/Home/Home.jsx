@@ -1,12 +1,13 @@
 import React from 'react';
 import Calendar from './../../Shared/calendar/Calendar';
 import layoutProfile from "../../../assets/layoutProfile.png";
+import Seven from "../../components/images/Seven.png"
+import { Link } from 'react-router';
 export default function Home() {
   return (
     <div className="relative text-center w-full min-h-screen">
       {/* Ambient background glow behind avatars */}
       <div className="absolute inset-0 bg-pink-500/20 blur-3xl rounded-full pointer-events-none" />
-
       <div className="absolute right-0">
         <Calendar />
       </div>
@@ -18,8 +19,8 @@ export default function Home() {
           </div>
         </p>
         <div className="avatar aura aura-rainbow rounded-full p-5">
-          <div className="ring-primary ring-offset-base-100 w-40 rounded-full ring-2 ring-offset-2">
-            <img alt="layoutProfile" src={layoutProfile} />
+          <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring-2 ring-offset-2">
+            <img alt="layoutProfile" src={Seven} />
           </div>
         </div>
 
@@ -35,6 +36,7 @@ export default function Home() {
           </p>
           <p className="text-5xl">শুরু কর,শেষ হবে</p>
         </div>
+        <Link to="/academic" className='btn btn-dash m-2 btn-info'>তোমার ক্লাস</Link>
       </div>
     </div>
   );

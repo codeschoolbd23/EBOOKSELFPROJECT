@@ -4,30 +4,29 @@ import Science_5 from "../E_Book_Self/FIVE_TEXT/Science_5.pdf";
 import BGS_5 from "../E_Book_Self/FIVE_TEXT/BGS_5.pdf";
 import Demi from '../../Utilities/subjectsHandlar/Demi';
 import SubjectTopics from '../../Utilities/subjectsHandlar/SubjectTopics';
-import { Outlet } from 'react-router';
-const {Topics_BGS_9}=SubjectTopics;
+
+const {Topics_BGS_5,Topics_Math_5,Topics_Science_5}=SubjectTopics;
 const Subjects = [
   {
     id: 2,
     name: "গণিত",
-    class:"Five",
-    content: <SubjectMemi sub={Math_5} topic={Topics_BGS_9}/>,
+    class: "Five",
+    content: <SubjectMemi sub={Math_5} topic={Topics_Math_5} />,
   },
 
   {
     id: 3,
     name: "বা.বি.প",
-    class:"Five",
-    content: <SubjectMemi sub={BGS_5} topic={Topics_BGS_9}/>,
+    class: "Five",
+    content: <SubjectMemi sub={BGS_5} topic={Topics_BGS_5} />,
   },
 
   {
     id: 4,
     name: "বিজ্ঞান",
-    class:"Five",
-    content: <SubjectMemi sub={Science_5} topic={Topics_BGS_9}/>,
+    class: "Five",
+    content: <SubjectMemi sub={Science_5} topic={Topics_Science_5} />,
   },
- 
 ];
 const Five = () => {
   console.log(Subjects);

@@ -20,8 +20,9 @@ import Eight from "../Documentation/Academic/Eight";
 import Nine from "../Documentation/Academic/Nine";
 import Eleven from "../Documentation/Academic/Eleven";
 import AcademicLayout from "../Documentation/Academic/AcademicLayout";
-import Demi from "../Utilities/subjectsHandlar/Demi";
+
 import Five from "../Documentation/Academic/Five";
+import One from "../Documentation/Academic/One";
 
 const route = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const route = createBrowserRouter([
     element: <AcademicLayout />,
     children: [
       { path: "/academic", element: <Academic /> },
+      { path: "/academic/One", element: <One />,},
       { path: "/academic/Four", element: <Four />,},
       { path: "/academic/Five", element: <Five /> },
       { path: "/academic/Six", element: <Six /> },

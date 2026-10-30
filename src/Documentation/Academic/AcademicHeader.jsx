@@ -7,12 +7,15 @@ import Seven from './Seven';
 import Eight from './Eight';
 import Nine from './Nine';
 import Eleven from './Eleven';
+import One from "./One";
+import Two from "./Two";
+import Three from "./Three";
 const AcademicHeader = () => {
   const AcademicClass = [
     
-    { id: 1, name: "প্রথম শ্রেণি", routClass:"/academic/Four",content: <Four /> },
-    { id: 2, name: "দ্বিতীয় শ্রেণি", routClass:"/academic/Four",content: <Four /> },
-    { id: 3, name: "তৃতীয় শ্রেণি", routClass:"/academic/Four",content: <Four /> },
+    { id: 1, name: "প্রথম শ্রেণি", routClass:"/academic/One",content: <One /> },
+    { id: 2, name: "দ্বিতীয় শ্রেণি", routClass:"/academic/Two",content: <Two/> },
+    { id: 3, name: "তৃতীয় শ্রেণি", routClass:"/academic/Three",content: <Three /> },
     { id: 4, name: "চতুর্থ শ্রেণি", routClass:"/academic/Four",content: <Four /> },
     { id: 5, name: "পঞ্চম শ্রেণি", routClass:"/academic/Five",content: <Five /> },
     { id: 6, name: "ষষ্ঠ শ্রেণি", routClass:"/academic/Six",content: <Six /> },

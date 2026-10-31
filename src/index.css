@@ -2,9 +2,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @tailwind utilities;
+
+
 @plugin "daisyui" {
   themes: light --default, synthwave --preferssynthwave;
-}:root,
+}
+
+:root,
 [data-theme] {
   background-color: var(--root-bg);
   color: var(--color-base-content);

@@ -5,7 +5,7 @@ import Footer from '../../Documentation/Navigation/Footer/Footer';
 // import { useLocation } from "react-router-dom";
 const Search = () => {
     return (
-      <div>
+      <div data-theme="synthwave">
         <Navbar />
         <div className="w-full min-h-100 flex flex-col justify-center items-center">
           <Outlet />

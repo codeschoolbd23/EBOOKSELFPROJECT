@@ -11,43 +11,14 @@ function Voice() {
        {
         navigate("/search", { state: { query: text } });
       } else {
-        // alert("অনুগ্রহ করে কিছু লিখুন!");
         navigate("/", { state: { query: text } });
-        // setText("");
       }
   };
 
   return (
-   
-
-      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        {/* ভয়েস কন্ট্রোলার বাটন */}
-        <VoiceController />
-
-        {/* সাধারণ সার্চ ফর্ম */}
-        <form
-          onSubmit={handleSearchSubmit}
-          style={{ display: "flex", gap: "8px" }}
-        >
-          <input
-            type="text"
-            placeholder="খুঁজুন..."
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            style={{
-
-              borderRadius: "4px",
-              border: "1px solid #ccc",
-            }}
-          />
-          <button
-            type="submit"
-           
-          >
-            Search
-          </button>
-        </form>
-      </div>
+    <div>
+      <VoiceController handleSearchSubmit={handleSearchSubmit} text={text} setText={setText}/>
+    </div>
   );
 }
 

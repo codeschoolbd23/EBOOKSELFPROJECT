@@ -37,15 +37,15 @@ function SearchPage({ book }) {
         {book?.map((item) => (
           <div key={item?.id}>
             {item.keyword.toLowerCase().includes(searchQuery.toLowerCase()) && (
-              <div className="flex p-5">
+              <div className="flex p-4 m-2">
                 <Document
-                  className="p-3"
+                  className="px-3"
                   file={item?.content}
                   loading={<div>Loading Document...</div>}
                   error={<div>Failed to load PDF file.</div>}
                 >
                   <Page
-                    height={200}
+                    height={220}
                     pageNumber={1}
                     pageColors={"#ffff"}
                     renderAnnotationLayer={true}
@@ -66,7 +66,7 @@ function SearchPage({ book }) {
                   <p className="text-base-content/70 text-sm  text-start">
                     {item?.section}
                   </p>
-                  <p className="text-xs text-gray-400 text-justify">{about}</p>
+                  <p className="text-gray-400 text-justify">{about}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-xs text-base-content/50">
                       By{" "}

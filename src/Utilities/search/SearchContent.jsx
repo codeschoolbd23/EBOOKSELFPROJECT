@@ -73,7 +73,8 @@ const books = [
     name: "প্রাথমিক বাংলা (দ্বিতীয় শ্রেণি)",
     author: "NCTB(National Curiculam Text Book Board)",
     content: Bangla_2,
-    keyword: "দ্বিতীয় শ্রেণি (Class Two) প্রাথমিক বাংলা (দ্বিতীয় শ্রেণি) Bangla",
+    keyword:
+      "দ্বিতীয় শ্রেণি (Class Two) প্রাথমিক বাংলা (দ্বিতীয় শ্রেণি) Bangla",
   },
   {
     id: 5,
@@ -83,7 +84,7 @@ const books = [
     content: Math_2,
     keyword: "দ্বিতীয় শ্রেণি (Class Two) প্রাথমিক গণিত (দ্বিতীয় শ্রেণি) Math",
   },
- 
+
   {
     id: 7,
     section: "তৃতীয় শ্রেণি (Class Three)",
@@ -301,7 +302,8 @@ const books = [
     name: "গণিত (নবম-দশম শ্রেণি) Class 9-10",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ClassNineMath,
-    keyword: "নবম শ্রেণি (Class 9-10) গণিত (নবম-দশম শ্রেণি) Class 9-10",
+    keyword:
+      "নবম শ্রেণি (Class 9-10) গণিত (mathematics) (নবম-দশম শ্রেণি) Class 9-10 math",
   },
   {
     id: 51,
@@ -309,7 +311,8 @@ const books = [
     name: "উচ্চতর গণিত (নবম-দশম শ্রেণি) Class 9-10",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ClassNineHigherMath,
-    keyword: "নবম শ্রেণি (Class 9-10) উচ্চতর গণিত (নবম-দশম শ্রেণি) Class 9-10",
+    keyword:
+      "নবম শ্রেণি (Class 9-10) উচ্চতর গণিত (Higher mathematics) (নবম-দশম শ্রেণি) Class 9-10 math",
   },
   {
     id: 52,

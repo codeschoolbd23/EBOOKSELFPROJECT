@@ -3,22 +3,10 @@ import { Link } from 'react-router-dom';
 import logo1 from "../../../assets/logo1.png";
 import { useNavigate } from "react-router-dom";
 import ThemeControler from '../../../Utilities/Theme/ThemeControler';
+import Voice from '../../../Utilities/Voice/Voice';
 // import Voice from '../../../Utilities/Voice/Voice';
 // import Search from '../../../Utilities/search/Search';
-const Navbar = () => {
-  const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const success = e.target.page.value;
-    console.log("Input Value:", success); 
-    if (success.trim() !== "") { 
-      navigate("/search", { state: { query: success } });
-    } 
-    else {
-      // alert("অনুগ্রহ করে কিছু লিখুন!");
-      navigate("/", { state: { query: success } });
-    }
-  };  
+const Navbar = () => { 
   const classCSS = "dropdown-content menu bg-fuchsia-500 z-1 w-fit p-2";
   return (
     <div className="sticky top-0 border-b border-purple-900/20 bg-slate-950/80 backdrop-blur-md z-50 ">
@@ -26,11 +14,11 @@ const Navbar = () => {
         <div className="collapse-title navbar">
           {/* Synthwave Retro Sun & Grid Background Effect */}
           <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0)_60%,rgba(219,39,119,0.1)_100%)] pointer-events-none" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-b from-pink-600 to-amber-500 rounded-full blur-[120px] opacity-20 pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2  bg-linear-to-b from-pink-600 to-amber-500 rounded-full blur-[120px] opacity-20 pointer-events-none" />
           <div className="navbar-start">
             <Link
               to="/"
-              className="flex items-center text-4xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+              className="flex items-center text-4xl font-black tracking-widest text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-pink-500 to-purple-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"
             >
               <img src={logo1} alt="Logo" className="h-16 w-18" />
               <span className="text-amber-400 ml-1">ই-বুক</span>
@@ -39,17 +27,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-center text-2xl text-pink-200">
-            <form onSubmit={handleSubmit}>
-              <input
-                // onChange={handleSubmit}
-                type="text"
-                name="page"
-                className="input font-thin text-black  badge-ghost bg-amber-50"
-                placeholder="Search by book name"
-                title="Search keyword: book name/class/writer"
-              />
-            </form>
-            {/* <Voice/> */}
+            <Voice/>
           </div>
           <div className="navbar-end flex">
             <ul className="menu menu-horizontal flex-nowrap text-2xl text-primary">
@@ -61,7 +39,7 @@ const Navbar = () => {
                 <Link to="/job" tabIndex={0} role="button">
                   জব
                 </Link>
-                <ul tabIndex={-1} className={classCSS}>
+                <ul tabIndex={-1} className={`${classCSS}`}>
                   <li>
                     <Link to="/job">বিসিএস</Link>
                   </li>

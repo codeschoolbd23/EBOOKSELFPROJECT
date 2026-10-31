@@ -29,7 +29,8 @@ function VoiceController({handleSearchSubmit,text,setText}) {
     // নতুন করে রিকগনিশন অবজেক্ট তৈরি
     const recognition = new SpeechRecognition();
     recognition.continuous = false;
-    recognition.lang = "en-US"; // বাংলার জন্য 'bn-BD' ব্যবহার করতে পারেন
+    // recognition.lang = "en-US"; // বাংলার জন্য 'bn-BD' ব্যবহার করতে পারেন
+    // recognition.lang = "bn-BD"; // বাংলার জন্য 'bn-BD' ব্যবহার করতে পারেন
     recognition.interimResults = false;
 
     // লিসেনিং শুরু হওয়ার ইভেন্ট
@@ -67,25 +68,38 @@ function VoiceController({handleSearchSubmit,text,setText}) {
     <div className="flex items-center gap-2">
       <button
         onClick={startListening}
-        className={`btn flex items-center gap-2 px-2 py-2.5 rounded-xl font-semibold shadow-md transition-all duration-300 border-none select-none text-white
+        className={`relative flex items-center justify-center w-16 h-16 rounded-full duration-500 shadow-2xl
     ${
       isListening
-        ? "bg-linear-to-r from-rose-500 to-red-600 shadow-lg shadow-red-500/50 animate-pulse scale-105"
-        : "bg-linear-to-r from-emerald-500 to-green-600 shadow-md shadow-green-500/20 hover:shadow-lg hover:shadow-green-500/40 hover:-translate-y-0.5 active:scale-95"
+        ? "bg-linear-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white shadow-purple-500/50"
+        : "bg-slate-900 border border-slate-700 text-purple-400 hover:text-purple-300 shadow-black/40"
     }`}
       >
-        {isListening ? (
+        {/* Multi-layered Wave Animation */}
+        {isListening && (
           <>
-            <span className="loading loading-ring loading-lg text-white"></span>
-            <span className="tracking-wide">Listening...</span>
-          </>
-        ) : (
-          <>
-            <span className="text-lg">🎙️</span>
-            <span className="tracking-wide">Voice Search</span>
+            <span className="fixed inline-flex h-14 w-14 rounded-full bg-purple-500 opacity-40 animate-ping duration-1000"></span>
+            <span className="fixed inline-flex h-10 w-10 rounded-full bg-pink-500 opacity-30 animate-pulse"></span>
           </>
         )}
+
+        {/* Modern Voice Line Icon */}
+        <svg
+          xmlns="http://w3.org"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-7 h-7 z-10"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"
+          />
+        </svg>
       </button>
+
       {/* {transcript && (
         <>{setText(transcript)}</>
       )} */}

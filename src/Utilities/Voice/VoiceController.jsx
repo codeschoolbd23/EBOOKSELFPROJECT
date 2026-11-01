@@ -68,18 +68,18 @@ function VoiceController({handleSearchSubmit,text,setText}) {
     <div className="flex items-center gap-2">
       <button
         onClick={startListening}
-        className={`relative flex items-center justify-center w-16 h-16 rounded-full duration-500 shadow-2xl
+        className={`relative flex items-center justify-center w-16 h-16 rounded-full duration-500 shadow-lg hover:bg-primary
     ${
       isListening
         ? "bg-linear-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white shadow-purple-500/50"
-        : "900 border border-slate-700 text-purple-400 hover:text-purple-300 shadow-black/40"
+        : "900  border-slate-700 text-purple-400 hover:text-purple-300"
     }`}
       >
         {/* Multi-layered Wave Animation */}
         {isListening && (
           <>
             <span className="fixed inline-flex h-14 w-14 rounded-full bg-purple-500 opacity-40 animate-ping duration-1000"></span>
-            <span className="fixed inline-flex h-10 w-10 rounded-full bg-pink-500 opacity-30 animate-pulse"></span>
+            <span className="fixed  inline-flex h-10 w-10 rounded-full bg-pink-500 opacity-30 animate-pulse"></span>
           </>
         )}
 

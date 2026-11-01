@@ -31,7 +31,7 @@ const route = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <ErrorBoundary />,
+    
     children: [
       { path: "/", element: <Home /> },
       {

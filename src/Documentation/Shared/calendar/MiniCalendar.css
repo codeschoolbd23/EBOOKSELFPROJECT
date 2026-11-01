@@ -1,6 +1,6 @@
 .mini-calendar {
     width: 230px;
-    background: white;
+    
     border: 0px dashed #e2e8f0;
     border-radius: 0px;
     padding: 3px;
@@ -19,7 +19,7 @@
   }
   
   .calendar-header button {
-    background: transparent;
+    
     border: none;
     cursor: pointer;
     padding: 4px 4px;
@@ -28,7 +28,7 @@
   }
   
   .calendar-header button:hover {
-    background: #f7fafc;
+    
   }
   
   .calendar-weekdays {
@@ -55,13 +55,14 @@
     font-size: 12px;
     border-radius: 50%;
     border: none;
-    background: transparent;
-    color: #2d3748;
+    color: yellowgreen;
     cursor: pointer;
   }
   
   .day-btn:hover {
-    background: #edf2f7;
+    
+background: #3182ce !important;
+    color: #ffffff !important;
   }
   
   .day-btn.today {
@@ -71,7 +72,8 @@
   }
   
   .day-btn.selected {
-    background: #3182ce !important;
+    
+background: #3182ce !important;
     color: #ffffff !important;
   }
   

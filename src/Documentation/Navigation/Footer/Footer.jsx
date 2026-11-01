@@ -3,8 +3,7 @@ import logo1 from "../../../assets/logo1.png";
 import { Link } from "react-router";
 const Footer = () => {
   return (
-    <footer className="relative shadow-2xl shadow-amber-100 footer sm:footer-horizontal text-primary px-15 pt-20 pb-5">
-      
+    <footer className="bg-base-100 relative shadow-2xl shadow-amber-100 footer sm:footer-horizontal text-primary px-15 pt-20 pb-5">
       <nav className="mask mask-diamond w-48 h-48 bg-black">
         <div className="px-10 pt-12">
           <Link to="/">

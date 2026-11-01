@@ -2,19 +2,39 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import { ExternalLink } from "react-external-link";
+import { useEffect, useState } from "react";
+import Skeleton from "../../../Router/Skeleton";
 import { books } from "../../../Utilities/search/SearchContent";
-console.log("book",books);
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url,
+    "pdfjs-dist/build/pdf.worker.min.mjs",
+    import.meta.url,
 ).toString();
 function BoiGhor() {
- 
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    console.log("list", data);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setData(books);
+        setLoading(false); 
+      }, 5000); 
+    }, []);
+    if (loading) {
+      return (
+        <>
+          <Skeleton />
+        </>
+      );
+    }
+    console.log("book",data);
   return (
-    <div>
-      {/* <p></p> */}
-      <div className="flex flex-wrap mx-auto justify-center items-center">
-        {books?.map((item) => (
+    <div className="bg-base-100">
+      <p className="text-3xl w-full p-2 bg-base-300 font-black text-primary">
+        তোমার প্রিয় বইসমূহ
+      </p>
+      <div className=" flex flex-wrap mx-auto justify-center items-center">
+        {data?.map((item) => (
           <div key={item?.id}>
             <div className="p-8">
               <Document

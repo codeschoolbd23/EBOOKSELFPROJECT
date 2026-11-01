@@ -4,13 +4,14 @@ import Seven from "../../components/images/Seven.png";
 import { Link } from 'react-router';
 import BoiGhor from './BoiGhor';
 import BoiCategory from './BoiCategory';
-import { books } from '../../../Utilities/search/SearchContent';
 export default function Home() {
-  console.log("list",books);
+ 
   return (
     <div>
-      <div className='flex container mx-auto'>
-        <div className='w-1/4'><BoiCategory/></div>
+      <div className="flex container mx-auto bg-base-100">
+        <div className="w-1/4">
+          <BoiCategory />
+        </div>
         <div className="relative text-center w-3/4">
           <div className="absolute right-0">
             <Calendar />
@@ -46,7 +47,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div><BoiGhor/></div>
+      <div>
+        <BoiGhor/>
+      </div>
     </div>
   );
 }

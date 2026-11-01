@@ -48,7 +48,7 @@ export default function Calendar() {
   const allDays = [...blankDays, ...monthDays];
 
   return (
-    <div className="mini-calendar">
+    <div className="mini-calendar bg-base-100">
       <div className="calendar-header">
         <button onClick={handlePrevMonth}>&lt;</button>
         <span>

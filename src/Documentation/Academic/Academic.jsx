@@ -63,7 +63,7 @@ export default function Academic() {
 
             {/* Student 1: School Boy Graphic */}
             <div className="group relative bg-linear-to-b from-purple-900/40 to-slate-950 border border-purple-500/30 p-5 rounded-2xl w-full text-center transform hover:-translate-y-2 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:border-cyan-400/60 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)]">
-              <div className="w-60 h-60 mx-auto rounded-full bg-linear-to-tr from-cyan-500 to-blue-600 p-1 mb-4 shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+              <div className="w-60 h-60 mx-auto rounded-full  p-1 mb-4 shadow-[0_0_15px_rgba(34,211,238,0.4)]">
                 <div className="w-full h-full rounded-full 950 flex items-center justify-center overflow-hidden">
                   {/* Cyber Student Boy SVG Icon */}
                   <img src={Four} />
@@ -82,7 +82,7 @@ export default function Academic() {
 
             {/* Student 2: School Girl Graphic */}
             <div className="group relative bg-linear-to-b from-purple-900/40 to-slate-950 border border-purple-500/30 p-5 rounded-2xl w-full text-center transform hover:-translate-y-2 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:border-cyan-400/60 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)]">
-              <div className="w-60 h-60 mx-auto rounded-full bg-linear-to-tr from-cyan-500 to-blue-600 p-1 mb-4 shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+              <div className="w-60 h-60 mx-auto rounded-full  p-1 mb-4 shadow-[0_0_15px_rgba(34,211,238,0.4)]">
                 <div className="w-full h-full rounded-full 950 flex items-center justify-center overflow-hidden">
                   {/* Cyber Student Girl SVG Icon */}
                   <img src={Six} />

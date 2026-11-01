@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")], // এটি থাকা বাধ্যতামূলক
+  plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "cupcake", "cyberpunk"], // এই থিমগুলো কাজ করবে
+    themes: ["light", "dark", "synthwave", "cupcake"], 
   },
 };

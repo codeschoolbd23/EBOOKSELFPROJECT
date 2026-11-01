@@ -9,6 +9,7 @@ import Seven from "../../Documentation/components/images/Seven.png";
 import Eight from "../../Documentation/components/images/Two.png";
 import Nine from "../../Documentation/components/images/Six.png";
 import HSC_ICT from "../../Documentation/components/images/hsc_ict.jpg";
+import { Link } from 'react-router';
 
 const ClassLayout = ({X}) => {
   const imagX=[
@@ -28,27 +29,27 @@ const ClassLayout = ({X}) => {
   const text="আমরা আমাদের গ্রাহকদের জন্য সেরা এবং মানসম্মত সেবা নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ। দীর্ঘদিনের অভিজ্ঞতা এবং দক্ষ টিমের মাধ্যমে আমরা প্রতিনিয়ত নতুন নতুন প্রযুক্তি ও উদ্ভাবনী আইডিয়া নিয়ে কাজ করে যাচ্ছি। আমাদের মূল লক্ষ্য হলো সততা, নিষ্ঠা এবং উন্নত সেবার মাধ্যমে গ্রাহকদের সন্তুষ্টি অর্জন করা এবং তাদের স্বপ্নকে বাস্তবে রূপ দেওয়া।"
     console.log(X)
     return (
-      <div className="">
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0)_60%,rgba(219,39,119,0.1)_100%)] pointer-events-none" />
+      <div className="bg-base-100">
+        <div className="absolute inset-0 pointer-events-none" />
         <div className="flex">
-          <div className="w-2/5 bg-white p-1">
+          <div className="w-2/5 p-1">
             <div className="mx-auto">
               <div className="flex items-center justify-center">
                 {imagX?.map((im) => (
                   <div key={im?.id}>
                     {im?.classX === X && (
-                      <img src={im?.imG} alt={im?.classX} className="w-full" />
+                      <img src={im?.imG} alt={im?.classX} className="w-full bg-base-100" />
                     )}
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <div className="w-3/5 flex flex-col justify-center items-center h-full pt-32 overflow-scroll">
+          <div className="w-3/5 flex flex-col justify-center items-center h-full pt-5 overflow-scroll">
             <span className="text-5xl font-bold text-blue-500 text-wrap text-start p-1">
               Here, the books of {X} are avaiable
             </span>
-            <div className='p-3'>
+            <div className="p-3">
               <p className="p-1 text-wrap text-justify italic">{text}</p>
               <p className="p-1 text-wrap text-justify">{text}</p>
               <p className="p-1 text-wrap text-justify">{text}</p>
@@ -59,7 +60,7 @@ const ClassLayout = ({X}) => {
               <p className="p-1 text-wrap text-justify">{text}</p>
             </div>
 
-            <button className="btn btn-primary">Home</button>
+            <Link to="/academic" className="btn btn-primary">Return</Link>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ const Circuller = () => {
     return (
       <div className="w-full bg-base-100">
         <div className="flex w-full">
-          <div className="w-4/5 grid grid-cols-3 h-full overflow-scroll">
+          <div className="w-4/5 flex flex-wrap justify-center items-center gap-2  h-full overflow-scroll">
             {jobCircullers.map((job, index) => (
               <div key={index} className="py-3 w-60">
                 <figure className="">
@@ -23,8 +23,8 @@ const Circuller = () => {
               </div>
             ))}
           </div>
-          <div className="bg-success w-1/5 flex flex-col justify-center items-center h-full overflow-hidden shadow-2xl shadow-green-600">
-            <p className="text-xl text-yellow-300">
+          <div className="bg-base-100 w-1/5 flex flex-col justify-center items-center h-full overflow-hidden shadow-sm shadow-green-200">
+            <p className="text-xl text-yellow-500">
               Latest Circuller/Mega Circuller
             </p>
             {[1, 2]?.map((job, index) => (

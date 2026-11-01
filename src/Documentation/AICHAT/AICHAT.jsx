@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { GoogleGenAI } from "@google/genai";
 import ReactMarkdown from "react-markdown";
-import Footer from "./../Navigation/Footer/Footer";
-import Navbar from "./../Navigation/Navbar/Navbar";
+
 import { Link } from "react-router";
 import { useSpeechRecognition, VoiceButton } from "./aiControler";
 
@@ -121,79 +120,15 @@ function AICHAT() {
 
   return (
     <div
-      className={` flex flex-col justify-between transition-colors duration-300 ${
-        darkMode ? "950 text-white" : "50 text-slate-900"
+      className={`bg-base-100 h-full flex flex-col justify-between transition-colors duration-300
       }`}
     >
       
 
       <main className="flex-1 max-w-3xl mx-auto w-full p-4 md:p-6 flex flex-col">
-        {/* হেডার এরিয়া */}
-        <div className="flex justify-between items-center mb-6">
-          <div className="text-center flex items-center gap-4">
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className={`p-2.5 rounded-xl border transition-all duration-300 shadow-sm flex items-center justify-center ${
-                darkMode
-                  ? "900 border-slate-800 text-yellow-400 hover:800"
-                  : "bg-white border-slate-200 text-slate-700 hover:100"
-              }`}
-            >
-              {darkMode ? (
-                <svg
-                  xmlns="http://w3.org"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5 animate-pulse"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3v2.25m0 13.5V21M4.22 4.22l1.58 1.58m9.59 9.59l1.58 1.58M3 12h2.25m13.5 0H21M4.22 19.78l1.58-1.58m9.59-9.59l1.58-1.58M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://w3.org"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-                  />
-                </svg>
-              )}
-            </button>
-
-            <h1
-              className={`text-xl md:text-3xl font-extrabold flex items-center gap-2 ${
-                darkMode ? "text-violet-400" : "text-slate-800"
-              }`}
-            >
-              <Link className="text-sm flex items-center gap-1 font-bold">
-                <span className="text-amber-400">ই-বুক</span>
-                <span className="text-sm font-extrabold text-fuchsia-400">
-                  //
-                </span>
-                <span className="text-green-300">সেলফ</span>
-              </Link>
-            </h1>
-          </div>
-        </div>
-
         {/* --- CHAT TIMELINE STREAM --- */}
         <div
-          className={`flex-1 h-[450px] rounded-xl shadow-sm border p-6 overflow-y-auto mb-4 flex flex-col gap-4 transition-all duration-300 ${
-            darkMode
-              ? "900 border-slate-800"
-              : "bg-white border-slate-200"
+          className={`flex-1 h-[450px] rounded-xl shadow-sm border p-6 overflow-y-auto mb-4 flex flex-col gap-4 transition-all duration-300
           }`}
         >
           {messages.map((msg) => (
@@ -206,15 +141,7 @@ function AICHAT() {
               }`}
             >
               <div
-                className={`rounded-2xl p-4 text-sm md:text-base leading-relaxed ${
-                  msg.sender === "user"
-                    ? "bg-violet-600 text-white rounded-tr-none shadow-sm"
-                    : `${
-                        darkMode
-                          ? "800 text-slate-100"
-                          : "100 text-slate-800"
-                      } rounded-tl-none prose max-w-none dark:prose-invert`
-                }`}
+                className={`rounded-2xl p-4 text-sm md:text-base leading-relaxed rounded-tl-none prose max-w-none dark:prose-invert` }
               >
                 {msg.sender === "user" ? (
                   <p className="whitespace-pre-wrap">{msg.text}</p>
@@ -245,10 +172,7 @@ function AICHAT() {
             placeholder="আপনার প্রশ্নটি লিখুন অথবা বলুন..."
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
-            className={`flex-1 p-3 rounded-xl border text-sm md:text-base outline-none transition-all ${
-              darkMode
-                ? "900 border-slate-800 text-white focus:border-violet-500"
-                : "bg-white border-slate-300 text-slate-900 focus:border-violet-600"
+            className={`flex-1 p-3 rounded-xl border text-sm md:text-base outline-none transition-all
             }`}
           />
 
@@ -256,7 +180,7 @@ function AICHAT() {
           <VoiceButton
             isListening={isListening}
             onClick={startListening}
-            darkMode={darkMode}
+           
           />
 
           <button

@@ -54,7 +54,7 @@ export default function SubjectMemi({ sub, topic }) {
 const btnClass="mx-1 btn btn-dash font-thin btn-xs btn-info hover:text-white focus:bg-violet-500 px-2  rounded-full"
 const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center px-1">
+    <div className="bg-base-100 w-full h-full flex flex-col justify-center items-center px-1">
       {/* Control Toolbar */}
       <div className="relative w-full flex justify-between pt-1 px-2 mb-2">
         <span>
@@ -126,16 +126,16 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
         <div className="w-1/5 text-blue-300 text-lg">
           <div className="badge-ghost">অধ্যায় সমূহ</div>
           <div className="flex flex-col h-full m-0 overflow-scroll">
-          {topic?.map((subTopic) => (
-            <button
-              key={subTopic?.id}
-              onClick={() => unitPage(subTopic?.page)}
-              disabled={pageNumber >= numPages}
-              className="text-start link link-hover font-thin  hover:text-primary focus:bg-violet-500 focus:text-pink-300 m-1 px-1 rounded-xl"
-            >
-              {subTopic?.lesson}:{subTopic?.topic}
-            </button>
-          ))}
+            {topic?.map((subTopic) => (
+              <button
+                key={subTopic?.id}
+                onClick={() => unitPage(subTopic?.page)}
+                disabled={pageNumber >= numPages}
+                className="text-start link link-hover font-thin  hover:text-primary focus:bg-violet-500 focus:text-pink-300 m-1 px-1 rounded-xl"
+              >
+                {subTopic?.lesson}:{subTopic?.topic}
+              </button>
+            ))}
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mx-auto">

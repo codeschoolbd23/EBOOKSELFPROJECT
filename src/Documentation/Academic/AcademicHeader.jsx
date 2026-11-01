@@ -28,9 +28,9 @@ const AcademicHeader = () => {
   ];
   
   const class_name =
-    "text-lg border-b border-pink-600 rounded-full font-black focus:text-white px-1 focus:bg-blue-500  hover:bg-red-400";
+    "text-lg text-primary border-b bg-base-100 border-pink-600 rounded-full font-black focus:text-white px-1 focus:bg-blue-500  hover:bg-red-400";
   return (
-    <div className="sticky top-21 z-40  p-1">
+    <div className="sticky top-20 z-40  p-1 bg-base-100">
       <div className="mx-auto flex items-center justify-center">
         <nav className="flex font-black tracking-wider gap-1">
           {AcademicClass.map((classes) => (

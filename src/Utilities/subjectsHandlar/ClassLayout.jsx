@@ -28,7 +28,7 @@ const ClassLayout = ({X}) => {
   const text="আমরা আমাদের গ্রাহকদের জন্য সেরা এবং মানসম্মত সেবা নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ। দীর্ঘদিনের অভিজ্ঞতা এবং দক্ষ টিমের মাধ্যমে আমরা প্রতিনিয়ত নতুন নতুন প্রযুক্তি ও উদ্ভাবনী আইডিয়া নিয়ে কাজ করে যাচ্ছি। আমাদের মূল লক্ষ্য হলো সততা, নিষ্ঠা এবং উন্নত সেবার মাধ্যমে গ্রাহকদের সন্তুষ্টি অর্জন করা এবং তাদের স্বপ্নকে বাস্তবে রূপ দেওয়া।"
     console.log(X)
     return (
-      <div className="min-h-screen">
+      <div className="">
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,23,42,0)_60%,rgba(219,39,119,0.1)_100%)] pointer-events-none" />
         <div className="flex">
           <div className="w-2/5 bg-white p-1">
@@ -44,7 +44,7 @@ const ClassLayout = ({X}) => {
               </div>
             </div>
           </div>
-          <div className="w-3/5 flex flex-col justify-center items-center h-screen pt-32 overflow-scroll">
+          <div className="w-3/5 flex flex-col justify-center items-center h-full pt-32 overflow-scroll">
             <span className="text-5xl font-bold text-blue-500 text-wrap text-start p-1">
               Here, the books of {X} are avaiable
             </span>

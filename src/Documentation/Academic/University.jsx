@@ -9,7 +9,7 @@ const University = () => {
     return (
         <div>
            <Navbar/>
-           <div className='min-h-screen'><Outlet/></div>
+           <div className=''><Outlet/></div>
            <Footer/>
         </div>
     );

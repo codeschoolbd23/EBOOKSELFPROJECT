@@ -7,11 +7,11 @@ const BookList = () => {
 
   return (
     <div>
-      <Navbar />
+      
       <div>
         <Demo />
       </div>
-      <Footer />
+      
     </div>
   );
 };

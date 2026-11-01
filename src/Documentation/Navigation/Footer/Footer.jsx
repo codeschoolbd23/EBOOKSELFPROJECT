@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const Footer = () => {
   return (
     <footer className="relative shadow-2xl shadow-amber-100 footer sm:footer-horizontal text-primary px-15 pt-20 pb-5">
-      <div className="absolute inset-0 bg-pink-500/20 blur-3xl rounded-full pointer-events-none" />
+      
       <nav className="mask mask-diamond w-48 h-48 bg-black">
         <div className="px-10 pt-12">
           <Link to="/">

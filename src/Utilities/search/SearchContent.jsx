@@ -41,8 +41,9 @@ import ICT_IX_2 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_2.pdf";
 import ICT_IX_3_1 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_3.1.pdf";
 import ICT_IX_3_2 from "../../Documentation/E_Book_Self/HSC_TEXT/ICT_IX_3.2.pdf";
 import ClassNineChemistry from "../../Documentation/E_Book_Self/SSC_TEXT/ClassNineChemistry.pdf";
-import SearchPage from "./SearchPage";
-const books = [
+// import SearchPage from "./SearchPage";
+
+export const books = [
   {
     id: 1,
     section: "প্রথম শ্রেণি (Class One)",
@@ -245,46 +246,46 @@ const books = [
 
   {
     id: 39,
-    section: "অষ্টম শ্রেণি (Class Seven)",
+    section: "অষ্টম শ্রেণি (Class Eight)",
     name: "বাংলা ব্যাকরণ (Bangla Grammar Class 8)",
     author: "NCTB(National Curiculam Text Book Board)",
     content: BanglaBakoron_8,
     keyword:
-      "অষ্টম শ্রেণি (Class Seven) বাংলা ব্যাকরণ (Bangla Grammar Class 8)",
+      "অষ্টম শ্রেণি (Class Eight) বাংলা ব্যাকরণ (Bangla Grammar Class 8)",
   },
   {
     id: 40,
-    section: "অষ্টম শ্রেণি (Class Seven)",
+    section: "অষ্টম শ্রেণি (Class Eight)",
     name: "গণিত(Mathematics)",
     author: "NCTB(National Curiculam Text Book Board)",
     content: Math_8,
-    keyword: "অষ্টম শ্রেণি (Class Seven) গণিত(Mathematics)",
+    keyword: "অষ্টম শ্রেণি (Class Eight) গণিত(Mathematics)",
   },
   {
     id: 41,
-    section: "অষ্টম শ্রেণি (Class Seven)",
+    section: "অষ্টম শ্রেণি (Class Eight)",
     name: "Science(বিজ্ঞান)",
     author: "NCTB(National Curiculam Text Book Board)",
     content: Science_8,
-    keyword: "অষ্টম শ্রেণি (Class Seven) Science(বিজ্ঞান)",
+    keyword: "অষ্টম শ্রেণি (Class Eight) Science(বিজ্ঞান)",
   },
   {
     id: 42,
-    section: "অষ্টম শ্রেণি (Class Seven)",
+    section: "অষ্টম শ্রেণি (Class Eight)",
     name: "বাংলাদেশ ও বিশ্বপরিচয়",
     author: "NCTB(National Curiculam Text Book Board)",
     content: BGS_8,
-    keyword: "অষ্টম শ্রেণি (Class Seven) বাংলাদেশ ও বিশ্বপরিচয়",
+    keyword: "অষ্টম শ্রেণি (Class Eight) বাংলাদেশ ও বিশ্বপরিচয়",
   },
 
   {
     id: 44,
-    section: "অষ্টম শ্রেণি (Class Seven)",
+    section: "অষ্টম শ্রেণি (Class Eight)",
     name: "আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 8",
     author: "NCTB(National Curiculam Text Book Board)",
     content: ICT_8,
     keyword:
-      "অষ্টম শ্রেণি (Class Seven) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 8",
+      "অষ্টম শ্রেণি (Class Eight) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 8",
   },
 
   {
@@ -402,12 +403,4 @@ const books = [
       "একাদশ - দ্বাদশ (Class Eleven Twelve) আইসিটি (তথ্য ও যোগাযোগ প্রযুক্তি) ICT Class 11-12",
   },
 ];
-const SearchContent= () => {
-  return (
-    <div className="w-full p-5">
-      <SearchPage book={books} />
-    </div>
-  );
-};
 
-export default SearchContent;

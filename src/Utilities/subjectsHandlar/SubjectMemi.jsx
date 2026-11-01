@@ -125,7 +125,7 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
       <div className="flex w-full justify-between">
         <div className="w-1/5 text-blue-300 text-lg">
           <div className="badge-ghost">অধ্যায় সমূহ</div>
-          <div className="flex flex-col h-screen m-0 overflow-scroll">
+          <div className="flex flex-col h-full m-0 overflow-scroll">
           {topic?.map((subTopic) => (
             <button
               key={subTopic?.id}

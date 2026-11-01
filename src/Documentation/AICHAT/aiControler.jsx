@@ -56,8 +56,8 @@ export function VoiceButton({ isListening, onClick, darkMode }) {
           isListening
             ? "bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white shadow-purple-500/50"
             : darkMode
-              ? "bg-slate-900 border border-slate-700 text-purple-400 hover:text-purple-300 shadow-black/40"
-              : "bg-white border border-slate-300 text-purple-600 hover:bg-slate-50 shadow-sm"
+              ? "900 border border-slate-700 text-purple-400 hover:text-purple-300 shadow-black/40"
+              : "bg-white border border-slate-300 text-purple-600 hover:50 shadow-sm"
         }`}
     >
       {isListening && (

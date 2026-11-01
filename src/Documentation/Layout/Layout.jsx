@@ -4,10 +4,10 @@ import Navbar from "../Navigation/Navbar/Navbar";
 import Footer from "../Navigation/Footer/Footer";
 const Layout = () => {         
   return (
-    <div data-theme="synthwave">
-      <Navbar />
+    <div>
+      <Navbar/>
       <Outlet></Outlet>
-      <Footer />
+      <Footer/>
     </div>
   );
 };

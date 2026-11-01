@@ -6,10 +6,10 @@ import Footer from '../Navigation/Footer/Footer';
 const Circuller = () => {
     const jobCircullers=[1,2,3,4,5,6,7,8,9]
     return (
-      <div data-theme="synthwave" className="w-full">
-        <Navbar />
+      <div  className="w-full">
+        
         <div className="flex w-full">
-          <div className="w-4/5 grid grid-cols-3 h-screen overflow-scroll">
+          <div className="w-4/5 grid grid-cols-3 h-full overflow-scroll">
             {jobCircullers.map((job, index) => (
               <div key={index} className="py-3 w-60">
                 <figure className="">
@@ -55,7 +55,7 @@ const Circuller = () => {
             ))}
           </div>
         </div>
-        <Footer />
+        
       </div>
     );
 };

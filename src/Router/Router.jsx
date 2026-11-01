@@ -5,7 +5,6 @@ import ErrorBoundary from './ErrorBoundary';
 import AICHAT from './../Documentation/AICHAT/AICHAT';
 import FourZeroFour from './FourZeroFour';
 import Search from "../Utilities/search/Search";
-import SearchContent from "../Utilities/search/SearchContent";
 import Academic from "../Documentation/Academic/Academic";
 import University from './../Documentation/Academic/University';
 import Jobs from './../Documentation/NoneAcademic/Jobs/Jobs';
@@ -26,68 +25,71 @@ import One from "../Documentation/Academic/One";
 import Two from "../Documentation/Academic/Two";
 import Three from "../Documentation/Academic/Three";
 import Circuller from './../Documentation/Job/Circuller';
+import SearchPage from "../Utilities/search/SearchPage";
 
 const route = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     errorElement: <ErrorBoundary />,
-    children: [{ path: "/", element: <Home /> }],
-  },
-
-  {
-    path: "/academic",
-    element: <AcademicLayout />,
     children: [
-      { path: "/academic", element: <Academic /> },
-      { path: "/academic/One", element: <One /> },
-      { path: "/academic/Two", element: <Two /> },
-      { path: "/academic/Three", element: <Three /> },
-      { path: "/academic/Four", element: <Four /> },
-      { path: "/academic/Five", element: <Five /> },
-      { path: "/academic/Six", element: <Six /> },
-      { path: "/academic/Seven", element: <Seven /> },
-      { path: "/academic/Eight", element: <Eight /> },
-      { path: "/academic/Nine", element: <Nine /> },
-      { path: "/academic/Ten", element: <Nine /> },
-      { path: "/academic/Eleven", element: <Eleven /> },
-      { path: "/academic/Twelve", element: <Eleven /> },
+      { path: "/", element: <Home /> },
+      {
+        path: "/academic",
+        element: <AcademicLayout />,
+        children: [
+          { path: "/academic", element: <Academic /> },
+          { path: "/academic/One", element: <One /> },
+          { path: "/academic/Two", element: <Two /> },
+          { path: "/academic/Three", element: <Three /> },
+          { path: "/academic/Four", element: <Four /> },
+          { path: "/academic/Five", element: <Five /> },
+          { path: "/academic/Six", element: <Six /> },
+          { path: "/academic/Seven", element: <Seven /> },
+          { path: "/academic/Eight", element: <Eight /> },
+          { path: "/academic/Nine", element: <Nine /> },
+          { path: "/academic/Ten", element: <Nine /> },
+          { path: "/academic/Eleven", element: <Eleven /> },
+          { path: "/academic/Twelve", element: <Eleven /> },
+        ],
+      },
+    
+      {
+        path: "/university",
+        element: <University />,
+      },
+      {
+        path: "/circuller",
+        element: <Circuller/>,
+      },
+      {
+        path: "/religion",
+        element: <Religion />,
+      },
+      {
+        path: "/other",
+        element: <Others />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
+        children:[{path:"/search", element:<SearchPage/>}]
+      },
+      {
+        path: "/aichat",
+        element: <AICHAT />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/drive",
+        element: <BookList />,
+      },
     ],
   },
 
-  {
-    path: "/university",
-    element: <University />,
-  },
-  {
-    path: "/circuller",
-    element: <Circuller/>,
-  },
-  {
-    path: "/religion",
-    element: <Religion />,
-  },
-  {
-    path: "/other",
-    element: <Others />,
-  },
-  {
-    path: "/search",
-    element: <Search />,
-    children: [{ path: "/search", element: <SearchContent /> }],
-  },
-  {
-    path: "/aichat",
-    element: <AICHAT />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/drive",
-    element: <BookList />,
-  },
   {
     path: "/*",
     element: <FourZeroFour />,

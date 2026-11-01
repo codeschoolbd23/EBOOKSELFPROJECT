@@ -7,11 +7,11 @@ import AcademicHeader from './AcademicHeader';
 const AcademicLayout = () => {
   useTitle("একাডেমিক")
     return (
-        <div data-theme="synthwave" className="relative w-full">
-          <Navbar />
+        <div  className="relative w-full">
+          
           <AcademicHeader />
             <Outlet></Outlet>
-          <Footer />
+          
         </div>
     );
 };

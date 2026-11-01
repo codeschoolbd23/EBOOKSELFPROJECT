@@ -1,43 +1,52 @@
 import React from 'react';
 import Calendar from './../../Shared/calendar/Calendar';
-import layoutProfile from "../../../assets/layoutProfile.png";
-import Seven from "../../components/images/Seven.png"
+import Seven from "../../components/images/Seven.png";
 import { Link } from 'react-router';
+import BoiGhor from './BoiGhor';
+import BoiCategory from './BoiCategory';
+import { books } from '../../../Utilities/search/SearchContent';
 export default function Home() {
+  console.log("list",books);
   return (
-    <div className="relative text-center w-full min-h-screen">
-      {/* Ambient background glow behind avatars */}
-      <div className="absolute inset-0 bg-pink-500/20 blur-3xl rounded-full pointer-events-none" />
-      <div className="absolute right-0">
-        <Calendar />
-      </div>
-      <div className="flex flex-col justify-center items-center">
-        <p>
-          জীবনের শ্রেষ্ঠ সম্পদ
-          <div className="badge badge-secondary p-2 rotate-6 font-extrabold text-xl">
-            পড়া
+    <div>
+      <div className='flex container mx-auto'>
+        <div className='w-1/4'><BoiCategory/></div>
+        <div className="relative text-center w-3/4">
+          <div className="absolute right-0">
+            <Calendar />
           </div>
-        </p>
-        <div className="avatar aura aura-rainbow rounded-full p-5">
-          <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring-2 ring-offset-2">
-            <img alt="layoutProfile" src={Seven} />
+          <div className="flex flex-col justify-center items-center">
+            <div>
+              জীবনের শ্রেষ্ঠ সম্পদ
+              <div className="badge badge-secondary p-2 rotate-6 font-extrabold text-xl">
+                পড়া
+              </div>
+            </div>
+            <div className="avatar aura aura-rainbow rounded-full p-5">
+              <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring-2 ring-offset-2">
+                <img alt="layoutProfile" src={Seven} />
+              </div>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <p className="text-8xl">
+                <span className="text-fuchsia-700">
+                  <span className="aura aura-dual rounded-full">তুমি</span> পড়
+                </span>
+                -
+                <span className="text-green-700">
+                  <span className="aura aura-dual rounded-full">তুমি</span>{" "}
+                  পাড়বে
+                </span>
+              </p>
+              <p className="text-5xl">শুরু কর,শেষ হবে</p>
+            </div>
+            <Link to="/academic" className="btn btn-dash m-2 btn-info">
+              তোমার ক্লাস
+            </Link>
           </div>
         </div>
-
-        <div className="flex flex-col justify-center items-center">
-          <p className="text-8xl">
-            <span className="text-fuchsia-700">
-              <span className="aura aura-dual rounded-full">তুমি</span> পড়
-            </span>
-            -
-            <span className="text-green-700">
-              <span className="aura aura-dual rounded-full">তুমি</span> পাড়বে
-            </span>
-          </p>
-          <p className="text-5xl">শুরু কর,শেষ হবে</p>
-        </div>
-        <Link to="/academic" className='btn btn-dash m-2 btn-info'>তোমার ক্লাস</Link>
       </div>
+      <div><BoiGhor/></div>
     </div>
   );
 }

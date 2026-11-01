@@ -4,18 +4,19 @@ import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import { ExternalLink } from "react-external-link";
 import Modal from "../Modal/Modal";
+import { books } from "./SearchContent";
+console.log("book",books);
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url,
 ).toString();
-function SearchPage({ book }) {
+function SearchPage() {
   const location = useLocation();
   const searchQuery = location.state?.query || "";
-  console.log(book);
   const about =
     "বাংলাদেশ সরকার কর্তৃক বিনামূল্যে বিতরণকৃত পাঠ্যপুস্তকসমূহকে সাধারণ শিক্ষার্থীদের দোরগোড়ায় পৌঁছে দিতে আমাদের এই ই-বুক সেলফ প্ল্যাটফর্ম একটি ডিজিটাল সহযোগী হিসেবে কাজ করছে। প্রযুক্তির এই আধুনিক যুগে শিক্ষার আলো ছড়িয়ে দিতে এবং পড়াশোনাকে আরও সহজলভ্য করতে আমরা সম্পূর্ণ বিনামূল্যে এই সেবাটি চালু করেছি।আসুন, আমরা সবাই মিলে শিক্ষার আলো ছড়িয়ে দিই এবং একটি শিক্ষিত ও সমৃদ্ধ আগামী প্রজন্ম গড়ে তুলি।";
   return (
-    <div className="min-h-screen w-full">
+    <div className=" w-full">
       <div className="w-full btn btn-dash py-5 ">
         Search Results for:{" "}
         <span className="text-primary font-sans underline">
@@ -25,7 +26,7 @@ function SearchPage({ book }) {
           Found
           <span className="px-2">
             {
-              book?.filter((item) =>
+              books?.filter((item) =>
                 item.keyword.toLowerCase().includes(searchQuery.toLowerCase()),
               ).length
             }
@@ -34,7 +35,7 @@ function SearchPage({ book }) {
         </p>
       </div>
       <div>
-        {book?.map((item) => (
+        {books?.map((item) => (
           <div key={item?.id}>
             {item.keyword.toLowerCase().includes(searchQuery.toLowerCase()) && (
               <div className="flex p-4 m-2">
@@ -81,12 +82,12 @@ function SearchPage({ book }) {
             )}
           </div>
         ))}
-        {book?.filter((item) =>
+        {books?.filter((item) =>
           item.keyword.toLowerCase().includes(searchQuery.toLowerCase()),
         ).length === 0 && (
           <div className="w-full bg-red-300 text-start p-10 flex flex-col justify-center items-center">
             <p className="w-3/4 mx-auto">
-              Your searching book{" "}
+              Your searching books{" "}
               <span className="text-blue-300 underline">{searchQuery}</span> is
               not available now.
             </p>

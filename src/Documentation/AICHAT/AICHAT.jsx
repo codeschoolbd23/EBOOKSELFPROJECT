@@ -121,11 +121,11 @@ function AICHAT() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col justify-between transition-colors duration-300 ${
-        darkMode ? "bg-slate-950 text-white" : "bg-slate-50 text-slate-900"
+      className={` flex flex-col justify-between transition-colors duration-300 ${
+        darkMode ? "950 text-white" : "50 text-slate-900"
       }`}
     >
-      <Navbar />
+      
 
       <main className="flex-1 max-w-3xl mx-auto w-full p-4 md:p-6 flex flex-col">
         {/* হেডার এরিয়া */}
@@ -135,8 +135,8 @@ function AICHAT() {
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2.5 rounded-xl border transition-all duration-300 shadow-sm flex items-center justify-center ${
                 darkMode
-                  ? "bg-slate-900 border-slate-800 text-yellow-400 hover:bg-slate-800"
-                  : "bg-white border-slate-200 text-slate-700 hover:bg-slate-100"
+                  ? "900 border-slate-800 text-yellow-400 hover:800"
+                  : "bg-white border-slate-200 text-slate-700 hover:100"
               }`}
             >
               {darkMode ? (
@@ -192,7 +192,7 @@ function AICHAT() {
         <div
           className={`flex-1 h-[450px] rounded-xl shadow-sm border p-6 overflow-y-auto mb-4 flex flex-col gap-4 transition-all duration-300 ${
             darkMode
-              ? "bg-slate-900 border-slate-800"
+              ? "900 border-slate-800"
               : "bg-white border-slate-200"
           }`}
         >
@@ -211,8 +211,8 @@ function AICHAT() {
                     ? "bg-violet-600 text-white rounded-tr-none shadow-sm"
                     : `${
                         darkMode
-                          ? "bg-slate-800 text-slate-100"
-                          : "bg-slate-100 text-slate-800"
+                          ? "800 text-slate-100"
+                          : "100 text-slate-800"
                       } rounded-tl-none prose max-w-none dark:prose-invert`
                 }`}
               >
@@ -247,7 +247,7 @@ function AICHAT() {
             onChange={(e) => setPrompt(e.target.value)}
             className={`flex-1 p-3 rounded-xl border text-sm md:text-base outline-none transition-all ${
               darkMode
-                ? "bg-slate-900 border-slate-800 text-white focus:border-violet-500"
+                ? "900 border-slate-800 text-white focus:border-violet-500"
                 : "bg-white border-slate-300 text-slate-900 focus:border-violet-600"
             }`}
           />
@@ -268,7 +268,7 @@ function AICHAT() {
         </form>
       </main>
 
-      <Footer />
+      
     </div>
   );
 }

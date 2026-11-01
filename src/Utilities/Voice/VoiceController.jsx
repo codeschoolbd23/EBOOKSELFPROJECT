@@ -72,7 +72,7 @@ function VoiceController({handleSearchSubmit,text,setText}) {
     ${
       isListening
         ? "bg-linear-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white shadow-purple-500/50"
-        : "bg-slate-900 border border-slate-700 text-purple-400 hover:text-purple-300 shadow-black/40"
+        : "900 border border-slate-700 text-purple-400 hover:text-purple-300 shadow-black/40"
     }`}
       >
         {/* Multi-layered Wave Animation */}

@@ -25,6 +25,7 @@ import Five from "../Documentation/Academic/Five";
 import One from "../Documentation/Academic/One";
 import Two from "../Documentation/Academic/Two";
 import Three from "../Documentation/Academic/Three";
+import Circuller from './../Documentation/Job/Circuller';
 
 const route = createBrowserRouter([
   {
@@ -59,8 +60,8 @@ const route = createBrowserRouter([
     element: <University />,
   },
   {
-    path: "/job",
-    element: <Jobs />,
+    path: "/circuller",
+    element: <Circuller/>,
   },
   {
     path: "/religion",

@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo1 from "../../../assets/logo1.png";
-import { useNavigate } from "react-router-dom";
 import ThemeControler from '../../../Utilities/Theme/ThemeControler';
 import Voice from '../../../Utilities/Voice/Voice';
 // import Voice from '../../../Utilities/Voice/Voice';
 // import Search from '../../../Utilities/search/Search';
 const Navbar = () => { 
-  const classCSS = "dropdown-content menu bg-fuchsia-500 z-1 w-fit p-2";
+  const classCSS = "dropdown-content menu bg-fuchsia-500 z-50 w-fit p-2";
   return (
     <div className="sticky top-0 border-b border-purple-900/20 bg-slate-950/80 backdrop-blur-md z-50 ">
       <div className="bg-slate-950 text-purple-100 font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden relative">
@@ -34,10 +33,13 @@ const Navbar = () => {
               <li>
                 <Link to="/academic">একাডেমিক বই</Link>
               </li>
+              <li>
+                <Link to="/circuller">জব সার্কুলার</Link>
+              </li>
 
               <li className="dropdown dropdown-center">
                 <Link to="/job" tabIndex={0} role="button">
-                  জব
+                  জব বই
                 </Link>
                 <ul tabIndex={-1} className={`${classCSS}`}>
                   <li>

@@ -13,6 +13,7 @@ import Three from "./Three";
 const AcademicHeader = () => {
   const AcademicClass = [
     
+   
     { id: 1, name: "প্রথম শ্রেণি", routClass:"/academic/One",content: <One /> },
     { id: 2, name: "দ্বিতীয় শ্রেণি", routClass:"/academic/Two",content: <Two/> },
     { id: 3, name: "তৃতীয় শ্রেণি", routClass:"/academic/Three",content: <Three /> },
@@ -28,18 +29,19 @@ const AcademicHeader = () => {
   ];
   
   const class_name =
-    "text-lg text-primary border-b bg-base-100 border-pink-600 rounded-full font-black focus:text-white px-1 focus:bg-blue-500  hover:bg-red-400";
+    "text-primary border-b bg-base-100 border-pink-600 rounded-full font-medium focus:text-white px-1 focus:bg-blue-500  hover:bg-red-400";
   return (
     <div className="sticky top-20 z-40  p-1 bg-base-100">
       <div className="mx-auto flex items-center justify-center">
-        <nav className="flex font-black tracking-wider gap-1">
-          {AcademicClass.map((classes) => (
+        <nav className="flex tracking-wider gap-1">
+          {/* <div className={`${class_name}`}>শ্রেণি</div> */}
+          {AcademicClass?.map((classes) => (
             <Link
               to={`${classes?.routClass}`}
-              key={classes.id}
+              key={classes?.id}
               className={`${class_name} hover:text-blue-600 transition-colors duration-300`}
             >
-              {classes.name}
+              {classes?.name}
             </Link>
           ))}
         </nav>

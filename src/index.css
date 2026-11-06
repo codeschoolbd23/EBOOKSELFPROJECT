@@ -40,9 +40,6 @@ html, body, #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 100%) {
-    font-size: 24px;
-  }
 }
 
 @media (prefers-color-scheme: dark) {

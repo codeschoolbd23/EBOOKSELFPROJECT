@@ -1,3 +1,4 @@
+
 const Topics_Math_4 = [
   { id: 1, class: 4, lesson: "১", topic: "সংখ্যা ও স্থানীয় মান", page: 8 },
   { id: 2, class: 4, lesson: "২", topic: "যোগ ও বিয়োগ", page: 30 },
@@ -413,13 +414,87 @@ const Topics_BanglaBakoron_9 = [
     page: 185,
   },
 ];
-const SubjectTopics={Topics_BGS_9,
+const AcademicClass = [
+  { id: 1, name: "প্রথম শ্রেণি", routClass: "/academic/One",
+  },
+  {
+    id: 2,
+    name: "দ্বিতীয় শ্রেণি",
+    routClass: "/academic/Two",
+    
+
+  },
+  {
+    id: 3,
+    name: "তৃতীয় শ্রেণি",
+    routClass: "/academic/Three",
+    
+
+  },
+  {
+    id: 4,
+    name: "চতুর্থ শ্রেণি",
+    routClass: "/academic/Four",
+    
+
+  },
+  {
+    id: 5,
+    name: "পঞ্চম শ্রেণি",
+    routClass: "/academic/Five",
+    
+
+  },
+  { id: 6, name: "ষষ্ঠ শ্রেণি", routClass: "/academic/Six",
+  },
+  {
+    id: 7,
+    name: "সপ্তম শ্রেণি",
+    routClass: "/academic/Seven",
+    
+
+  },
+  {
+    id: 8,
+    name: "অষ্টম শ্রেণি",
+    routClass: "/academic/Eight",
+    
+
+  },
+  { id: 9, name: "নবম শ্রেণি", routClass: "/academic/Nine",
+  },
+  {
+    id: 10,
+    name: "দশম শ্রেণি",
+    routClass: "/academic/Nine",
+    
+
+  },
+  {
+    id: 11,
+    name: "একাদশ শ্রেণি",
+    routClass: "/academic/Eleven",
+    
+
+  },
+  {
+    id: 12,
+    name: "দ্বাদশ শ্রেণি",
+    routClass: "/academic/Twelve",
+    
+
+  },
+];
+const SubjectTopics = {
+  Topics_BGS_9,
   Topics_BanglaBakoron_9,
   Topics_Math_4,
   Topics_BGS_4,
   Topics_Science_4,
   Topics_Math_5,
   Topics_BGS_5,
-  Topics_Science_5,}
+  Topics_Science_5,
+  AcademicClass,
+};
 export default SubjectTopics;
   

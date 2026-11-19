@@ -1,39 +1,60 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
-import ClassLayout from './ClassLayout';
 const Demi = ({sub}) => {
   console.log(sub);
+  
   const [subjectID, setSubject] = useState("");
   const moveSubjects = (m) => {
     setSubject(m);
   };
   console.log(subjectID);
-  const class_name =
-    "p-1 text-lg text-primary btn btn-dashed flex justify-center items-center focus:bg-primary focus:text-yellow-300 hover:bg-yellow-500 hover:text-white mx-1 rounded-xl";
   return (
     <section className="w-full px-1 bg-base-100">
       <div className="w-full">
-        <div className="flex justify-center items-center w-full flex-wrap  drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">
-          <p className='font-black text-red-500'>বিষয় সমূহ:-</p>
-          {sub?.map((subject) => (
-            <Link
-              key={subject?.id}
-              onClick={() => moveSubjects(subject?.id)}
-              className={`${class_name}`}
-            >
-              {subject?.name}
-            </Link>
-          ))}
+        <div className="flex justify-center items-center flex-wrap">
+          <dialog
+            id="my_modal_5"
+            className="modal modal-start text-primary-content"
+          >
+            <div className="modal-box rounded-none">
+              <h3 className="font-bold text-lg text-orange-500">বই সমূহ </h3>
+              {sub?.map((subject) => (
+                <Link
+                  key={subject?.id}
+                  onClick={() => moveSubjects(subject?.id)}
+                  className="btn btn-outline btn-primary focus:text-blue-600 transition-colors duration-300 m-1"
+                >
+                  {subject?.name}
+                </Link>
+              ))}
+              <div className="modal-action">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </div>
         {sub?.map((subject) => (
-          <div className="w-full mx-0 text-xs" key={subject?.id}>
+          <div className="w-full mx-0 text-primary-content" key={subject?.id}>
             {Number(subject?.id) === Number(subjectID) && (
               <span> {subject?.content}</span>
             )}
           </div>
         ))}
+
         {Number(subjectID.length) === 0 && (
-          <ClassLayout X={sub[0].class}></ClassLayout>
+          <div className="w-full h-150 flex flex-col justify-center items-center">
+            আপনাকে প্রথমে একটি বিষয় নির্বাচন করতে হবে। <br />
+
+            <button
+              onClick={() => document.getElementById("my_modal_5").showModal()}
+              className={`btn btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
+            >
+              বিষয় সমূহ
+            </button>
+          </div>
         )}
       </div>
     </section>

@@ -11,8 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export default function SubjectMemi({ sub, topic }) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [scale, setScale] = useState(1); // Manage Zoom
-
+  const [scale, setScale] = useState(2); // Manage Zoom
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
     setPageNumber(1); // Reset to page 1 on new document load
@@ -52,11 +51,17 @@ export default function SubjectMemi({ sub, topic }) {
   const nextPage = () => changePage(1);
   const fileName = sub.split("/").pop();
 const btnClass="mx-1 btn btn-dash font-thin btn-xs btn-info hover:text-white focus:bg-violet-500 px-2  rounded-full"
-const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
+const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
   return (
     <div className="bg-base-100 w-full h-full flex flex-col justify-center items-center px-1">
       {/* Control Toolbar */}
       <div className="relative w-full flex justify-between pt-1 px-2 mb-2">
+        <button
+          onClick={() => document.getElementById("my_modal_5").showModal()}
+          className={`btn btn-sm btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
+        >
+         পড়ার বিষয় সমূহ
+        </button>
         <span>
           <ExternalLink
             href={sub} // Path relative to your public folder
@@ -67,18 +72,19 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
             Download
           </ExternalLink>
         </span>
+
         <span>
           <form onSubmit={HandleSubmit} className="flex">
             <input
               type="number"
               name="page"
-              className="input-xs  bg-base-300 rounded-xl text-center w-fit italic font-thin"
+              className="input-sm input text-red-500 bg-base-100 rounded-xl text-center w-full italic font-thin"
               placeholder="Enter page no"
               // defaultValue={1}
               min="1" // Prevents entering negative pages
             />
             {/* Changing to type="submit" fires the HandleSubmit function */}
-            <button type="submit" className={btnZoomClass}>
+            <button type="submit" className={btnClass}>
               Go Page
             </button>
           </form>
@@ -123,9 +129,9 @@ const btnZoomClass="mx-1 hover:bg-primary   hover:text-white focus:bg-violet-500
 
       {/* PDF Document w-full */}
       <div className="flex w-full justify-between">
-        <div className="w-1/5 text-blue-300 text-lg">
+        <div className="w-1/5 text-blue-300 text-lg font-thin bg-base-100">
           <div className="badge-ghost">অধ্যায় সমূহ</div>
-          <div className="flex flex-col h-full m-0 overflow-scroll">
+          <div className="flex flex-col h-full m-0 overflow-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
             {topic?.map((subTopic) => (
               <button
                 key={subTopic?.id}

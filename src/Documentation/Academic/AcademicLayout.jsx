@@ -7,7 +7,6 @@ const AcademicLayout = () => {
     return (
         <div  className="relative w-full">
           <AcademicHeader />
-            <Outlet></Outlet>
         </div>
     );
 };

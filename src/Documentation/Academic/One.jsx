@@ -11,12 +11,14 @@ const Subjects = [
     id: 1,
     name: "আমার বাংলা বই",
     class: "One",
+    routClass:"/academic/One",
     content: <SubjectMemi sub={Bangla_1} topic={Topics_Math_4} />,
   },
   {
     id: 2,
     name: "প্রাথমিক গণিত",
     class: "One",
+    routClass:"/academic/One",
     content: <SubjectMemi sub={Math_1} topic={Topics_Math_4} />,
   },
 
@@ -24,6 +26,7 @@ const Subjects = [
     id: 3,
     name: "English For Today",
     class: "One",
+    routClass:"/academic/One",
     content: <SubjectMemi sub={English_1} topic={Topics_BGS_4} />,
   },
 
@@ -32,7 +35,6 @@ const One = () => {
   console.log(Subjects);
   return (
     <>
-    
       <Demi sub={Subjects}/>
     </>
   );

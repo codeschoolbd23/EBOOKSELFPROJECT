@@ -5,7 +5,6 @@ import BGS_3 from "../E_Book_Self/THREE_TEXT/BGS_3.pdf";
 import Bangla_3 from "../E_Book_Self/THREE_TEXT/Bangla_3.pdf";
 import Demi from '../../Utilities/subjectsHandlar/Demi';
 import SubjectTopics from '../../Utilities/subjectsHandlar/SubjectTopics';
-
 const {Topics_BGS_5,Topics_Science_5}=SubjectTopics;
 const Subjects = [
   {

@@ -50,7 +50,7 @@ export default function SubjectMemi({ sub, topic }) {
   const prevPage = () => changePage(-1);
   const nextPage = () => changePage(1);
   const fileName = sub.split("/").pop();
-const btnClass="mx-1 btn btn-dash font-thin btn-xs btn-info hover:text-white focus:bg-violet-500 px-2  rounded-full"
+const btnClass="mx-1 btn btn-dash font-thin btn-xs btn-secondary hover:text-white focus:bg-violet-500 px-2  rounded-full"
 const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
   return (
     <div className="bg-base-100 w-full h-full flex flex-col justify-center items-center px-1">
@@ -97,7 +97,7 @@ const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus
           >
             Previous
           </button>
-          <span className="font-thin">
+          <span className="font-thin text-gray-500">
             Page {pageNumber} of {numPages || "..."}
           </span>
           <button
@@ -129,7 +129,7 @@ const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus
 
       {/* PDF Document w-full */}
       <div className="flex w-full justify-between">
-        <div className="w-1/5 text-blue-300 text-lg font-thin bg-base-100">
+        <div className="w-1/5 text-blue-700 text-lg font-thin bg-base-100">
           <div className="badge-ghost">অধ্যায় সমূহ</div>
           <div className="flex flex-col h-full m-0 overflow-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
             {topic?.map((subTopic) => (

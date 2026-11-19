@@ -1,12 +1,13 @@
 import React from 'react';
-import biddaloy from '../../Documentation/components/images/biddaloy.png';
+import biddaloy from "../../Documentation/components/images/library.jpg";
+import { Link } from 'react-router';
 const Academic = () => {
   return (
     <div className="flex flex-col justify-center items-center bg-base-100 w-full shadow-sm">
       <figure>
         <img
           src={biddaloy}
-          alt="biddaloy"
+          alt="biddaloy" className="w-screen bg-base-100"
         />
       </figure>
       <div className="card-body">
@@ -16,7 +17,9 @@ const Academic = () => {
           title and actions parts
         </p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <Link className="btn btn-primary" to="/academic">
+            Your Class
+          </Link>
         </div>
       </div>
     </div>

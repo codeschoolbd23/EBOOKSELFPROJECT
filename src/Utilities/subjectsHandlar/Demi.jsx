@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
+import biddaloy from "../../Documentation/components/images/class.jpg";
 const Demi = ({sub}) => {
   console.log(sub);
   
@@ -45,15 +46,40 @@ const Demi = ({sub}) => {
         ))}
 
         {Number(subjectID.length) === 0 && (
-          <div className="w-full h-150 flex flex-col justify-center items-center">
-            আপনাকে প্রথমে একটি বিষয় নির্বাচন করতে হবে। <br />
+          <div className="hero w-full bg-base-100">
+            <img
+              src={biddaloy}
+              alt="biddaloy"
+              className="w-full bg-base-100"
+            />
+            <div className="hero-overlay"></div>
+            <div className="hero-content text-neutral-content">
+              <div className="max-w-md">
+                <h1 className="mb-5 text-5xl font-bold">
+                  <button
+                    onClick={() =>
+                      document.getElementById("my_modal_5").showModal()
+                    }
+                    className={`btn btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
+                  >
+                    বিষয় সমূহ
+                  </button>
+                </h1>
+                <p className="mb-5">
+                  আপনাকে প্রথমে একটি বিষয় নির্বাচন করতে হবে। <br />
+                  তারপর আপনি সেই বিষয় সম্পর্কিত বই সমূহ দেখতে পারবেন।
+                </p>
 
-            <button
-              onClick={() => document.getElementById("my_modal_5").showModal()}
-              className={`btn btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
-            >
-              বিষয় সমূহ
-            </button>
+                <button
+                  onClick={() =>
+                    document.getElementById("my_modal_5").showModal()
+                  }
+                  className={`btn btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
+                >
+                  বিষয় সমূহ
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>

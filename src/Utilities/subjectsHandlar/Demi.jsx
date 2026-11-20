@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router';
-import biddaloy from "../../Documentation/components/images/class.jpg";
+import classJpg from "../../Documentation/components/images/class.jpg";
 const Demi = ({sub}) => {
   console.log(sub);
-  
-  const [subjectID, setSubject] = useState("");
+  const [subjectID, setSubject] = useState(1);
   const moveSubjects = (m) => {
     setSubject(m);
   };
@@ -12,28 +10,33 @@ const Demi = ({sub}) => {
   return (
     <section className="w-full px-1 bg-base-100">
       <div className="w-full">
-        <div className="flex justify-center items-center flex-wrap">
+        <div className="bg-base-100 w-full">
           <dialog
             id="my_modal_5"
-            className="modal modal-start text-primary-content"
+            className="modal modal-start text-primary-content w-full"
           >
-            <div className="modal-box rounded-none">
-              <h3 className="font-bold text-lg text-orange-500">বই সমূহ </h3>
-              {sub?.map((subject) => (
-                <Link
-                  key={subject?.id}
-                  onClick={() => moveSubjects(subject?.id)}
-                  className="btn btn-outline btn-primary focus:text-blue-600 transition-colors duration-300 m-1"
-                >
-                  {subject?.name}
-                </Link>
-              ))}
-              <div className="modal-action">
-                <form method="dialog">
-                  {/* if there is a button in form, it will close the modal */}
-                  <button className="btn">Close</button>
-                </form>
+            <div className="modal-box rounded-none w-1/3 bg-base-100 text-primary-content flex flex-col justify-start items-start ">
+              <h3 className="font-bold text-lg text-orange-500 w-full text-center">
+                বই সমূহ{" "}
+              </h3>
+              {/* if there is a button in form, it will close the modal */}
+              <div className="grid grid-cols-3 gap-1 w-full">
+                {" "}
+                {sub?.map((subject) => (
+                  <button
+                    key={subject?.id}
+                    onClick={() => moveSubjects(subject?.id)}
+                    className="btn btn-outline btn-primary focus:text-red-600 transition-colors duration-300 m-1"
+                  >
+                    {subject?.name}
+                  </button>
+                ))}
               </div>
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn">বন্ধ করুন</button>
+            </form>
+          </div>
             </div>
           </dialog>
         </div>
@@ -44,27 +47,12 @@ const Demi = ({sub}) => {
             )}
           </div>
         ))}
-
-        {Number(subjectID.length) === 0 && (
+        {Number(subjectID?.length) === 0 && (
           <div className="hero w-full bg-base-100">
-            <img
-              src={biddaloy}
-              alt="biddaloy"
-              className="w-full bg-base-100"
-            />
+            <img src={classJpg} alt="classJpg" className="w-full bg-base-100" />
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">
-                  <button
-                    onClick={() =>
-                      document.getElementById("my_modal_5").showModal()
-                    }
-                    className={`btn btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
-                  >
-                    বিষয় সমূহ
-                  </button>
-                </h1>
                 <p className="mb-5">
                   আপনাকে প্রথমে একটি বিষয় নির্বাচন করতে হবে। <br />
                   তারপর আপনি সেই বিষয় সম্পর্কিত বই সমূহ দেখতে পারবেন।

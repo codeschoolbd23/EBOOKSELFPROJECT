@@ -1,27 +1,14 @@
 import React from 'react';
-import biddaloy from "../../Documentation/components/images/library.jpg";
-import { Link } from 'react-router';
+import library from "../../Documentation/components/images/library.jpg";
 const Academic = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-base-100 w-full shadow-sm">
-      <figure>
-        <img
-          src={biddaloy}
-          alt="biddaloy" className="w-screen bg-base-100"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">Card Title</h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
+    <div className="relative hero w-full bg-base-100 h-full">
+      <img src={library} alt="library" className="w-full h-full" />
+      <div className="hero-overlay"></div>
+        <p className="bottom-20 text-2xl font-bold text-yellow-300 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center ">
+          আপনাকে প্রথমে একটি শ্রেণী নির্বাচন করতে হবে। <br />
+          তারপর আপনি সেই শ্রেণী সম্পর্কিত বই সমূহ দেখতে পারবেন।
         </p>
-        <div className="card-actions justify-end">
-          <Link className="btn btn-primary" to="/academic">
-            Your Class
-          </Link>
-        </div>
-      </div>
     </div>
   );
 };

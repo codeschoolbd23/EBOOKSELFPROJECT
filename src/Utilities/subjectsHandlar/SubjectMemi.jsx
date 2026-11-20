@@ -53,14 +53,14 @@ export default function SubjectMemi({ sub, topic }) {
 const btnClass="mx-1 btn btn-dash font-thin btn-xs btn-secondary hover:text-white focus:bg-violet-500 px-2  rounded-full"
 const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
   return (
-    <div className="bg-base-100 w-full h-full flex flex-col justify-center items-center px-1">
+    <div className="relative bg-base-100 w-full h-full flex flex-col justify-center items-center px-1">
       {/* Control Toolbar */}
-      <div className="relative w-full flex justify-between pt-1 px-2 mb-2">
+      <div className="fixed top-30 z-50  w-full flex justify-between pt-1 px-2 mb-2">
         <button
           onClick={() => document.getElementById("my_modal_5").showModal()}
           className={`btn btn-sm btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
         >
-         পড়ার বিষয় সমূহ
+          পড়ার বিষয় সমূহ
         </button>
         <span>
           <ExternalLink
@@ -126,12 +126,11 @@ const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus
           </button>
         </span>
       </div>
-
       {/* PDF Document w-full */}
-      <div className="flex w-full justify-between">
-        <div className="w-1/5 text-blue-700 text-lg font-thin bg-base-100">
+      <div className="flex w-full justify-between mt-10">
+        <div className="fixed w-1/5 text-blue-700 text-lg font-thin bg-base-100 mr-auto">
           <div className="badge-ghost">অধ্যায় সমূহ</div>
-          <div className="flex flex-col h-full m-0 overflow-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+          <div className="flex flex-col h-110 m-0 overflow-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
             {topic?.map((subTopic) => (
               <button
                 key={subTopic?.id}
@@ -144,7 +143,7 @@ const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center mx-auto">
+        <div className="w-4/5  ml-auto">
           <Document
             className="flex flex-col justify-center items-center"
             file={sub}

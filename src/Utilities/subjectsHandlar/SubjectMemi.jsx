@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaHome } from "react-icons/fa";
 import { ExternalLink } from "react-external-link";
+import { Link } from "react-router";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url,
@@ -131,8 +132,11 @@ export default function SubjectMemi({ sub, topic }) {
       {/* PDF Document w-full */}
 
       <div className="flex w-full justify-between">
-        <div className="fixed w-1/5 text-blue-700 text-lg font-thin bg-base-100 mr-auto mt-8">
-          <div className="badge-ghost">অধ্যায় সমূহ</div>
+        <div className="fixed w-1/5 text-blue-700 text-lg font-thin bg-base-100 mr-auto mt-30">
+          <Link className={`${btnClass} w-fit flex justify-center items-center m-2`} to="/">
+            <FaHome /> Home
+          </Link>
+          <div className="badge-ghost">অধ্যায় সমূহ</div>
           <div className="flex flex-col h-110 m-0 overflow-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
             {topic?.map((subTopic) => (
               <button

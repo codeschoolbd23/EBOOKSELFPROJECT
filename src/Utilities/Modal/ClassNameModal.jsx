@@ -43,7 +43,9 @@ const ClassNameModal = () => {
               </div>
               <div className="modal-action w-full flex justify-center items-center">
                 <form method="dialog">
-                  <button className="btn">বন্ধ করুন</button>
+                  <button className="btn btn-outline btn-primary focus:text-red-600 transition-colors duration-300 m-1">
+                    বন্ধ করুন
+                  </button>
                 </form>
               </div>
             </div>

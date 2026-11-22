@@ -19,7 +19,6 @@ import Eight from "../Documentation/Academic/Eight";
 import Nine from "../Documentation/Academic/Nine";
 import Eleven from "../Documentation/Academic/Eleven";
 import AcademicLayout from "../Documentation/Academic/AcademicLayout";
-
 import Five from "../Documentation/Academic/Five";
 import One from "../Documentation/Academic/One";
 import Two from "../Documentation/Academic/Two";

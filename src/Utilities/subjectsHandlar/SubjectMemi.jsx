@@ -50,29 +50,24 @@ export default function SubjectMemi({ sub, topic }) {
   const prevPage = () => changePage(-1);
   const nextPage = () => changePage(1);
   const fileName = sub.split("/").pop();
-const btnClass="mx-1 btn btn-dash font-thin btn-xs btn-secondary hover:text-white focus:bg-violet-500 px-2  rounded-full"
-const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
+  const btnClass =
+    "mx-1 btn btn-dash font-thin btn-xs btn-secondary hover:text-white focus:bg-violet-500 px-2  rounded-full";
+  // const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus:bg-violet-500 p-1 font-thin  rounded-full"
   return (
     <div className="relative bg-base-100 w-full h-full flex flex-col justify-center items-center px-1">
       {/* Control Toolbar */}
-      <div className="fixed top-30 z-50  w-full flex justify-between pt-1 px-2 mb-2">
-        <button
-          onClick={() => document.getElementById("my_modal_5").showModal()}
-          className={`btn btn-sm btn-outline btn-primary focus:text-orange-600 transition-colors duration-300 text-shadow-primary-content`}
-        >
-          পড়ার বিষয় সমূহ
-        </button>
+      <div className="fixed bg-base-100 top-20 z-50  w-full flex justify-between pt-1 px-2 mb-2">
         <span>
           <ExternalLink
+            title={fileName}
             href={sub} // Path relative to your public folder
             download={fileName} // The filename the user will save it as
-            className="text-white px-1 font-thin rounded-full bg-red-500 hover:bg-orange-500 flex items-center justify-center focus:bg-green-400"
+            className={btnClass}
           >
-            <FaDownload className="text-xl text-center text-white p-1" />
-            Download
+            <FaDownload className="text-xl text-center text-red-600 p-1" />
+            Download PDF
           </ExternalLink>
         </span>
-
         <span>
           <form onSubmit={HandleSubmit} className="flex">
             <input
@@ -89,6 +84,13 @@ const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus
             </button>
           </form>
         </span>
+        <button
+        title="পড়ার বই সমূহ"
+          onClick={() => document.getElementById("my_modal_5").showModal()}
+          className={btnClass}
+        >
+          পড়ার বই ‍সিলেক্ট করুন
+        </button>
         <span>
           <button
             onClick={prevPage}
@@ -114,21 +116,22 @@ const btnZoomClass="mx-1 hover:bg-primary text-yellow-500 hover:text-white focus
         <span>
           <button
             onClick={() => setScale((prev) => Math.max(prev - 0.2, 0.5))}
-            className={btnZoomClass}
+            className={btnClass}
           >
             ZOOM OUT
           </button>
           <button
             onClick={() => setScale((prev) => Math.min(prev + 0.2, 2.0))}
-            className={btnZoomClass}
+            className={btnClass}
           >
             ZOOM IN
           </button>
         </span>
       </div>
       {/* PDF Document w-full */}
-      <div className="flex w-full justify-between mt-10">
-        <div className="fixed w-1/5 text-blue-700 text-lg font-thin bg-base-100 mr-auto">
+
+      <div className="flex w-full justify-between">
+        <div className="fixed w-1/5 text-blue-700 text-lg font-thin bg-base-100 mr-auto mt-8">
           <div className="badge-ghost">অধ্যায় সমূহ</div>
           <div className="flex flex-col h-110 m-0 overflow-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
             {topic?.map((subTopic) => (

@@ -5,7 +5,7 @@ import ThemeControler from '../../../Utilities/Theme/ThemeControler';
 import Voice from '../../../Utilities/Voice/Voice';
 
 const Navbar = () => { 
-  const classCSS = "dropdown-content menu z-50 w-fit p-2";
+  // const classCSS = "dropdown-content menu z-50 w-fit p-2";
   return (
     <div className="sticky top-0 z-50 bg-base-100">
       <div className="relative">
@@ -24,7 +24,10 @@ const Navbar = () => {
           <div className="navbar-end flex">
             <ul className="menu menu-horizontal flex-nowrap text-2xl text-secondary">
               <li>
-                <Link to="/academic">আমার শ্রেণি</Link>
+                <Link to="/academic"
+                onClick={() =>
+                  document.getElementById("my_modal_4").showModal()}
+                >আমার শ্রেণি</Link>
               </li>
               <li>
                 <Link to="/circuller">জব সার্কুলার</Link>
